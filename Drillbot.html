@@ -1,0 +1,3406 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://app.drillbot.net/v1_1/inicial.php -->
+<html lang="pt-br" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Drillbot</title>     
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">  
+      <link rel="manifest" href="https://app.drillbot.net/v1_1/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Drillbot">
+<meta name="apple-mobile-web-app-title" content="Drillbot">
+<meta name="theme-color" content="#225a16">
+<meta name="msapplication-navbutton-color" content="#225a16">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="https://app.drillbot.net/v1_1/">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" type="image/png" sizes="500x500" href="https://app.drillbot.net/v1_1/icon/favicon-16x16.png">
+<link rel="apple-touch-icon" type="image/png" sizes="500x500" href="https://app.drillbot.net/v1_1/icon/favicon-16x16.png">
+        
+        
+	<link rel="stylesheet" href="./Drillbot_files/materialize.css">
+	<link rel="stylesheet" href="./Drillbot_files/font-awesome.min.css">
+	<link rel="stylesheet" href="./Drillbot_files/normalize.css">
+	<link rel="stylesheet" href="./Drillbot_files/owl.carousel.css">
+	<link rel="stylesheet" href="./Drillbot_files/owl.theme.css">
+	<link rel="stylesheet" href="./Drillbot_files/owl.transitions.css">
+	<link rel="stylesheet" href="./Drillbot_files/fakeLoader.css">
+	<link rel="stylesheet" href="./Drillbot_files/animate.css">
+	<link rel="stylesheet" href="./Drillbot_files/magnific-popup.css">
+	<link rel="stylesheet" href="./Drillbot_files/style.css">
+        <link rel="stylesheet" href="./Drillbot_files/sweetalert2.min.css" integrity="sha512-riZwnB8ebhwOVAUlYoILfran/fH0deyunXyJZ+yJGDyU0Y8gsDGtPHn1eh276aNADKgFERecHecJgkzcE9J3Lg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="./Drillbot_files/sweetalert2.min.js.download" integrity="sha512-jfVndX8aB+LSJHnrd4BY42vPo2J6NjccZclbhoXEvP8sFnZrj4umbXNHtdoYvacUAN+4X5su5wXjDGAuz5ceog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="./Drillbot_files/jquery.modal.min.css">
+<link rel="stylesheet" href="./Drillbot_files/dataTables.responsive.css">
+
+	<link rel="shortcut icon" href="https://app.drillbot.net/v1_1/icon/favicon-16x16.png">
+        
+
+
+        
+        <style>
+            .meter {
+  box-sizing: content-box;
+  height: 10px; /* Can be anything */
+  position: relative;
+  
+  background: #555;
+  border-radius: 25px;
+  padding: 2px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+.meter > span:after,
+.animate > span > span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+.animate > span:after {
+  display: none;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.orange > span {
+  background-image: linear-gradient(#f1a165, #f36d0a);
+}
+
+.red > span {
+  background-image: linear-gradient(#f0a3a3, #f42323);
+}
+
+.nostripes > span > span,
+.nostripes > span::after {
+  background-image: none;
+}
+
+ .swal-wide{
+    width:90% !important;
+}
+
+.conteudoModal{ width:100% !important}
+
+.buttons-html5{ margin-top: 16px;     height: 41px;}
+        </style>
+
+</head><body class="all-loaded">
+
+
+<div id="AguardaCattegamento" style=" padding: 20px; display: none; text-align: center; background: #fff; position: absolute; height: 100%; width: 100%; z-index: 9999;">
+    <br><br><br><br><br><br><h2>Carregando <br>novo treino...</h2><br>
+    <div class="boxes" style=" margin: auto; margin-top: 40%;">
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+<style>
+ .boxes {
+	 --size: 32px;
+	 --duration: 800ms;
+	 height: calc(var(--size) * 2);
+	 width: calc(var(--size) * 3);
+	 position: relative;
+	 transform-style: preserve-3d;
+	 transform-origin: 50% 50%;
+	 margin-top: calc(var(--size) * 1.5 * -1);
+	 transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+}
+ .boxes .box {
+	 width: var(--size);
+	 height: var(--size);
+	 top: 0;
+	 left: 0;
+	 position: absolute;
+	 transform-style: preserve-3d;
+}
+ .boxes .box:nth-child(1) {
+	 transform: translate(100%, 0);
+	 animation: box1 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(2) {
+	 transform: translate(0, 100%);
+	 animation: box2 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(3) {
+	 transform: translate(100%, 100%);
+	 animation: box3 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(4) {
+	 transform: translate(200%, 0);
+	 animation: box4 var(--duration) linear infinite;
+}
+ .boxes .box > div {
+	 --background: #7ccf7e;
+	 --top: auto;
+	 --right: auto;
+	 --bottom: auto;
+	 --left: auto;
+	 --translateZ: calc(var(--size) / 2);
+	 --rotateY: 0deg;
+	 --rotateX: 0deg;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 background: var(--background);
+	 top: var(--top);
+	 right: var(--right);
+	 bottom: var(--bottom);
+	 left: var(--left);
+	 transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+ .boxes .box > div:nth-child(1) {
+	 --top: 0;
+	 --left: 0;
+}
+ .boxes .box > div:nth-child(2) {
+	 --background: #3e8840;
+	 --right: 0;
+	 --rotateY: 90deg;
+}
+ .boxes .box > div:nth-child(3) {
+	 --background: #5bc35d;
+	 --rotateX: -90deg;
+}
+ .boxes .box > div:nth-child(4) {
+	 --background: #dbe3f4;
+	 --top: 0;
+	 --left: 0;
+	 --translateZ: calc(var(--size) * 3 * -1);
+}
+ @keyframes box1 {
+	 0%, 50% {
+		 transform: translate(100%, 0);
+	}
+	 100% {
+		 transform: translate(200%, 0);
+	}
+}
+ @keyframes box2 {
+	 0% {
+		 transform: translate(0, 100%);
+	}
+	 50% {
+		 transform: translate(0, 0);
+	}
+	 100% {
+		 transform: translate(100%, 0);
+	}
+}
+ @keyframes box3 {
+	 0%, 50% {
+		 transform: translate(100%, 100%);
+	}
+	 100% {
+		 transform: translate(0, 100%);
+	}
+}
+ @keyframes box4 {
+	 0% {
+		 transform: translate(200%, 0);
+	}
+	 50% {
+		 transform: translate(200%, 100%);
+	}
+	 100% {
+		 transform: translate(100%, 100%);
+	}
+}
+ html {
+	 -webkit-font-smoothing: antialiased;
+}
+ * {
+	 box-sizing: border-box;
+}
+ *:before, *:after {
+	 box-sizing: border-box;
+}
+ 
+    </style>    <h5></h5>
+</div>
+
+
+<div id="AguardaCPlaylist" style=" padding: 20px; display: none; text-align: center; background: #fff; position: absolute; height: 100%; width: 100%; z-index: 9999;">
+    <br><br><br><br><br><br><h2>Carregando Playlist.</h2><br>
+    Aguarde...
+    <br>
+    <div class="boxes" style=" margin: auto; margin-top: 40%;">
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+<style>
+ .boxes {
+	 --size: 32px;
+	 --duration: 800ms;
+	 height: calc(var(--size) * 2);
+	 width: calc(var(--size) * 3);
+	 position: relative;
+	 transform-style: preserve-3d;
+	 transform-origin: 50% 50%;
+	 margin-top: calc(var(--size) * 1.5 * -1);
+	 transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+}
+ .boxes .box {
+	 width: var(--size);
+	 height: var(--size);
+	 top: 0;
+	 left: 0;
+	 position: absolute;
+	 transform-style: preserve-3d;
+}
+ .boxes .box:nth-child(1) {
+	 transform: translate(100%, 0);
+	 animation: box1 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(2) {
+	 transform: translate(0, 100%);
+	 animation: box2 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(3) {
+	 transform: translate(100%, 100%);
+	 animation: box3 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(4) {
+	 transform: translate(200%, 0);
+	 animation: box4 var(--duration) linear infinite;
+}
+ .boxes .box > div {
+	 --background: #7ccf7e;
+	 --top: auto;
+	 --right: auto;
+	 --bottom: auto;
+	 --left: auto;
+	 --translateZ: calc(var(--size) / 2);
+	 --rotateY: 0deg;
+	 --rotateX: 0deg;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 background: var(--background);
+	 top: var(--top);
+	 right: var(--right);
+	 bottom: var(--bottom);
+	 left: var(--left);
+	 transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+ .boxes .box > div:nth-child(1) {
+	 --top: 0;
+	 --left: 0;
+}
+ .boxes .box > div:nth-child(2) {
+	 --background: #3e8840;
+	 --right: 0;
+	 --rotateY: 90deg;
+}
+ .boxes .box > div:nth-child(3) {
+	 --background: #5bc35d;
+	 --rotateX: -90deg;
+}
+ .boxes .box > div:nth-child(4) {
+	 --background: #dbe3f4;
+	 --top: 0;
+	 --left: 0;
+	 --translateZ: calc(var(--size) * 3 * -1);
+}
+ @keyframes box1 {
+	 0%, 50% {
+		 transform: translate(100%, 0);
+	}
+	 100% {
+		 transform: translate(200%, 0);
+	}
+}
+ @keyframes box2 {
+	 0% {
+		 transform: translate(0, 100%);
+	}
+	 50% {
+		 transform: translate(0, 0);
+	}
+	 100% {
+		 transform: translate(100%, 0);
+	}
+}
+ @keyframes box3 {
+	 0%, 50% {
+		 transform: translate(100%, 100%);
+	}
+	 100% {
+		 transform: translate(0, 100%);
+	}
+}
+ @keyframes box4 {
+	 0% {
+		 transform: translate(200%, 0);
+	}
+	 50% {
+		 transform: translate(200%, 100%);
+	}
+	 100% {
+		 transform: translate(100%, 100%);
+	}
+}
+ html {
+	 -webkit-font-smoothing: antialiased;
+}
+ * {
+	 box-sizing: border-box;
+}
+ *:before, *:after {
+	 box-sizing: border-box;
+}
+ 
+    </style>    <h5></h5>
+</div>
+
+
+<div id="CobretelaAvisoNovo" style=" padding: 20px; display: none; text-align: center; background: #bfbfbfe8; position: absolute; height: 100%; width: 100%; z-index: 9999;">
+    
+    <br><br><img src="./Drillbot_files/alert.png" width="60"><br><br>
+    
+    
+         <h5>ATENÇÃO:  AVISO IMPORTANTE !</h5><br>
+    <p style="text-align:justify">Na transição entre um treino e outro, no caso de redução da velocidade de disparo (ex: bola rápida para bola normal ou bola normal para bola lenta) , pode acontecer que máquina demore alguns minutos até assumir a redução da velocidade. Nesse caso, é só aguardar alguns minutos que a máquina irá se ajustar. Bom treino!!</p>
+
+<p style="text-align:justify">&nbsp;</p>
+                                                        
+    
+   
+     <button class="button-default" style=" margin-left: 5px; width: 100px" onclick="FechaCobretelaAvisoNovo()">Ok</button>
+</div>
+
+<!-- loader -->
+	<div id="fakeLoader" style="position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background-color: rgb(46, 204, 113); z-index: 999; display: none;"><div class="fl spinner6" style="position: absolute; left: 165.5px; top: 314.5px;"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div></div>
+	<!-- end loader -->
+
+	<!-- navbar top -->
+        <div class="navbar-top">
+		<!-- site brand	 -->
+		<div class="site-brand">
+                    <a href="https://app.drillbot.net/v1_1/inicial.php"><img src="./Drillbot_files/drillbot_logo.jpg" style=" height: 43px"></a> 
+                    
+                                        		</div>
+		<!-- end site brand	 -->
+                                      <div class="side-nav-panel-right">
+                            <a href="https://app.drillbot.net/v1_1/inicial.php#" data-activates="slide-out-right" class="side-nav-left"><i class="fa fa-bars"></i></a>
+                    </div>
+                                                 <div style=" border: none; margin-top: 55px;">
+                        <hr>
+                        </div>
+                        <div id="nomeUser">Boris Becker</div>
+                        <div id="CreditoUser"><p>Saldo</p><span class="valoratual">R$ 595,00</span></div>
+                        <div style=" border: none;">
+                            <hr>
+                        </div>
+                        
+                        
+                        
+                        <div id="btRecargaIni">  <a href="https://app.drillbot.net/v1_1/recarga.php"> <button class="button-default" style=" width: 100%">Recarregar (R$)</button></a></div> 
+                        
+                        
+
+                  	</div>
+	<!-- end navbar top -->
+  	<!-- side nav right-->
+        
+                      <div class="side-nav-panel-right">
+                      <ul id="slide-out-right" class="side-nav side-nav-panel collapsible right-aligned" style="transform: translateX(100%);">
+                              <li class="profil">
+                                      <h2>Boris Becker</h2>
+                              </li>
+                              <li><a href="https://app.drillbot.net/v1_1/configuracoes.php"><i class="fa fa-cog"></i>Meus dados</a></li>
+                              <li><a href="https://app.drillbot.net/v1_1/cod_afiliado.php"><i class="fa fa-ticket"></i>Código de afiliação</a></li>
+                              <li><a href="https://app.drillbot.net/v1_1/trocasenha.php"><i class="fa fa-key"></i>Alterar senha</a></li>
+                             <!-- <li onclick="reinicio_maquina(); "><a href="#" ><i class="fa fa-refresh"></i>Reiniciar máquina</a></li>  -->
+                             <li><a href="https://app.drillbot.net/v1_1/recarga.php"><i class="fa fa-money"></i>Recarregar</a></li>
+                             <li><a href="https://app.drillbot.net/v1_1/ver_playlist.php"><i class="fa fa-sliders"></i>Playlist's</a></li>
+                              <li><a href="https://app.drillbot.net/v1_1/suporte.php"><i class="fa fa-phone"></i>Suporte</a></li>    
+                              <li><a href="https://app.drillbot.net/v1_1/log_transacoes.php"><i class="fa fa-archive"></i>Extrato de transações</a></li>    
+                                                               <li><a href="https://app.drillbot.net/v1_1/inicial.php#" class="bt_excluiUserUser" id="100"><i class="fa fa-trash-o "></i>Excluir conta</a></li>
+                              <li><a href="https://app.drillbot.net/v1_1/api/exit.php"><i class="fa fa-sign-in"></i>Sair</a></li>
+                      </ul>
+              </div>
+
+        	<!-- end side nav right-->
+
+	<!-- navbar bottom -->
+        <div class="navbar-bottom">
+            <div class="row" style=" height: 60px">
+                    
+                        <div class="col s4">
+				<a href="https://app.drillbot.net/v1_1/inicial.php"><i class="fa fa-home"></i></a>
+			</div>
+			
+			<div class="col s8">
+				DrillBot - 2024<p>Desenvolvido por <a target="_blanck" href="https://upcomunicacaovisual.com.br/">Up Comunicação Visual</a></p>
+			</div>
+
+		</div>
+	</div>
+        
+       
+        
+	<!-- end navbar bottom -->
+
+        <!-- menu -->
+	<div class="menus animated animatedModal2-off" id="animatedModal2" style="position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; background-color: rgb(57, 190, 185); overflow-y: auto; z-index: -9999; opacity: 0; animation-duration: 0.6s;">
+		<div class="close-animatedModal2 close-icon">
+			<i class="fa fa-close"></i>
+		</div>
+		<div class="modal-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s4">
+						<a href="https://app.drillbot.net/v1_1/inicial.php" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-home"></i>
+								</div>
+								Início
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="https://app.drillbot.net/v1_1/inicial.php#" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-credit-card"></i>
+								</div>
+								Créditos 
+							</div>
+						</a>
+					</div>
+                                    
+                                    <div class="col s4">
+						<a href="https://app.drillbot.net/v1_1/inicial.php#" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-sign-in"></i>
+								</div>
+								Sair
+							</div>
+						</a>
+					</div>
+					
+				</div>
+				
+			
+			</div>
+		</div>
+	</div>
+	<!-- end menu -->
+        
+        
+        <style>
+                
+        </style>        	
+	
+	
+
+	<!-- about-home -->
+	<div class="about-home">
+		<div class="content">
+			<div class="container">
+                                
+                            <div class="post" style=" border: 0px solid; margin-top: -20px; background:#fff; z-index: 99">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div style=" margin-top: 400px; position:  absolute; z-index: 9999; display: none ">
+                                            <span id="tipo_comunicacao" style="">addGet</span> - 
+                                                                                            <span id="tipo_de_treino" style=""></span> - 
+                                                                                        
+                                            <span id="txt_bt_variacao" style="">19:0</span> - 
+                                            <span id="txt_bt_efeito" style="">12:0|15:0</span> - 
+                                            <span id="txt_bt_velocidade" style="">25:0|22:0</span> - 
+                                            <span id="cod_playlist" style=""></span> -
+                                            
+                                            
+                                            
+                                           
+                                            
+                                                                                            <span id="txt_bt_intervalo" style="">21:1|13:0</span> -
+                                                                                        
+                                           
+                                            <span id="txt_bt_trajetoria" style="">0:0</span> - 
+                                            
+                                            
+                                                                                            <span id="txt_bt_pressao" style="">2:1</span>(2:1)- 
+                                                                                        
+                                            
+                                            
+                                             <span id="txt_bt_nome_treino" style=""></span>
+                                            
+                                    </div>
+                                   
+                                    <div class="codigoMaquina" style="display: none"></div>
+                                    <div class="NomeClube" style="display: none"></div>
+                                    
+                                    <div id="SobrepoeEspTeste"></div>         
+                                    
+                                    
+                                    
+                                    <div class="quadro_playlist" style=" display: none ">
+                                        
+                                          
+                                        
+                                                                               
+                                         
+                                        <div id="bt_abre_playlist" style=" display: none">
+                                            
+                                            <center> <h3>Criar Playlist</h3> <hr><br>
+                                        Selecione o número de treinos!
+                                        
+                                         
+                                                   
+                                                    <select name="id_playlist" id="id_playlist" class="browser-default" onchange="bt_abre_playlist()" required="">
+                                                        <option value="1">1 Treino</option>
+                                                        <option value="2">2 Treinos</option>
+                                                        <option value="3">3 Treinos</option>
+                                                        <option value="4">4 Treinos</option>
+                                                    </select>
+                                             
+                                        
+                                        </center>
+                                             <center><b>2</b> de <b>10</b> <a href="https://app.drillbot.net/v1_1/ver_playlist.php">Playlists criadas</a></center>
+                                        </div>
+                                          
+                                                                              
+                                                    <!-- <button class="button-default"   onclick="bt_abre_playlist()" style=" width: 130px; margin-right: 5px " >Criar playlist</button> -->
+                                        </div>
+                                    
+                                    
+                                     <div id="abre_playlist" style="display: none ">
+                                                                                
+                                            Escolha Treino <span class="numero_play"></span><hr><br>
+                                            <div style=" width: 220px; margin: auto" id="carregaPlaylistbd">
+                                                   
+                                               </div>
+                                                    
+                                                  <!--  <button class="button-default" style=" width: 130px; margin-right: 5px " >Meus Treinos</button> -->
+                                                    
+                                        </div>        
+                                    
+                                    <div id="verifica_playlist"> <div id="escreve_verifica_playlist"> </div></div>
+                                    
+<!-- ************************************************************************************************************* -->
+<style>
+    #abre_playlist{ position: absolute;
+    z-index: 11;
+     border: 0px solid;  width: 310px;
+    margin-left: 50%;
+    left: -155px;
+    margin-top: 475px;}
+    
+    .playlist{ border: 0px solid;     width: 52px;
+    float: left;}
+    
+    .quadro_playlist{
+        position: absolute;
+        z-index: 11;
+        text-align: center;
+        width: 310px;
+        margin-left: 50%;
+        left: -155px;
+        margin-top: 350px;   
+    }
+    
+    .top_quadro_playlist_0{ margin-top: 0px !important;};
+    .top_quadro_playlist_350{ margin-top: 350px !important;};
+    
+    .ringesp
+{
+  position:absolute;
+  top:51%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:150px;
+  height:150px;
+  background:transparent;
+  border:0px solid #fff;
+  border-radius:50%;
+  text-align:center;
+  line-height:150px;
+  font-family:sans-serif;
+  font-size:20px;
+  color:#fff;
+  letter-spacing:4px;
+  text-transform:uppercase;
+
+}
+.ringesp:before
+{
+  content:'';
+  position:absolute;
+  top:-3px;
+  left:-3px;
+  width:100%;
+  height:100%;
+  border:3px solid transparent;
+  border-top:3px solid #fff;
+  border-right:3px solid #fff;
+  border-radius:50%;
+  animation:animateC 2s linear infinite;
+}
+esp
+{
+  display:block;
+  position:absolute;
+  top:calc(50% - 2px);
+  left:50%;
+  width:50%;
+  height:4px;
+  background:transparent;
+  transform-origin:left;
+  animation:animate 2s linear infinite;
+}
+esp:before
+{
+  content:'';
+  position:absolute;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:#fff;
+  top:-6px;
+  right:-8px;
+  box-shadow:0 0 20px #fff;
+}
+@keyframes animateC
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
+}
+
+
+.swal2-styled.swal2-confirm {
+   
+    background-color: #4caf50 !important;
+}
+
+</style>
+<div id="SobrepoeEsp" style=" display: none; position: fixed; height: 100%; width: 100%; z-index: 9999; background: #4caf50d1; margin-left: -18px; top: 0px; padding-top: 36%; color: #fff">
+    <h2 style=" color: #fff">Aguardando a comunicação com o equipamento!</h2><br>
+    <div class="ringesp">Aguarde!
+  <esp></esp>
+</div>
+</div>
+<!-- ************************************************************************************************************* -->                                   
+                                    <div class="Tempo_escolhido" style="display: none; "></div>
+                                    <div id="TempoRestanteRet" style="  display: none"></div>
+                                    
+                                    <div id="Bloco_ativacao" style="   ">
+                                        
+                                        <div>
+                                            <center>                                                
+                                                                                            
+                                            </center>
+                                        </div>
+                                    
+                                        
+                                        
+                                        <div class=" botao_inicial" id="clickCamera" onclick="clica_camera()" style="margin-top: 10px;">Clique aqui<br> para ler o QR Code da maquina a ser utilizada</div>
+                                        <div class="txtQr"><p><br>O QR Code está localizado em um adesivo, na lateral da Máquina</p>
+                                        <p style=" font-weight: bold; color: #ff0000">Verifique se a máquina está ligada</p>
+                                        
+                                        <br><br>
+                                                                                   <button class="button-default" style=" margin-left: 5px; width: 250px; z-index: 999" onclick="add_new_play()"> Criar Playlist.</button>
+                                       
+                                         <br>
+                                                                                   <center><a href="https://app.drillbot.net/v1_1/ver_playlist.php"><button class="button-default" style=" margin-left: 5px; width: 250px; z-index: 999"> Listar Playlist's</button></a></center>
+                                         <!--<b>2</b> de <b>10</b> Playlists criadas</a></center>-->
+                                        
+                                        </div>
+                                        
+                                        
+                                        <script type="text/javascript" src="./Drillbot_files/instascan.min.js.download"></script>	
+                                        <div class="botao_camera">                                      
+                                            <video id="preview" autoplay="" playsinline="" controls="" style="  border: 1px solid; width:  250px; border-radius: 10px">Permissao</video>
+                                        </div>
+                                        
+                                        
+                                        <div class="escolha_recarga" style=" display: none;  position: absolute; width: 90%; border: 0px solid; z-index: -1">
+
+                                                                                        
+                                           
+                                            <div id="selectComboTempo" style="">
+                                                <div id="nomeUser" style=" padding-top: 5px; text-align: center; ">Definir tempo de uso da máquina..</div>
+                                                
+                                                <select style=" " name="tempo" id="tempo_select" onchange="mostra_confirmacao()" class="browser-default validate" required="" size="10">
+                                                    <option value="">Selecione o tempo</option>
+
+                                                                                                            <option value="28">5 Minutos (R$5,00)</option>   
+                                                                                                            <option value="8">15 Minutos (R$10,00)</option>   
+                                                                                                            <option value="26">20 Minutos (R$20,00)</option>   
+                                                                                                            <option value="25">30 Minutos (R$25,00)</option>   
+                                                                                                            <option value="30">40 Minutos (R$30,00)</option>   
+                                                                                                            <option value="24">60 Minutos (R$40,00)</option>   
+                                                                                                </select>
+                                                
+                                                
+                                                
+                                                
+                                            </div>
+                                            
+                                        
+
+                                    </div>
+                                    
+                                   
+                                    
+                                    
+                                    
+				</div>
+                                    
+                                      <div id="Bloco_Envio" style="display: none">
+                                          <br><br><br><br>
+                                        <div class="smileError" style="display: none"><img src="./Drillbot_files/smile.png" style=" width: 90px; margin-top: 50px"></div>
+                                        <div class="mensagem_carregando"> </div>
+                                        <div id="includloading"><div class="boxes" style=" margin: auto; margin-top: 40%;">
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+<style>
+ .boxes {
+	 --size: 32px;
+	 --duration: 800ms;
+	 height: calc(var(--size) * 2);
+	 width: calc(var(--size) * 3);
+	 position: relative;
+	 transform-style: preserve-3d;
+	 transform-origin: 50% 50%;
+	 margin-top: calc(var(--size) * 1.5 * -1);
+	 transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+}
+ .boxes .box {
+	 width: var(--size);
+	 height: var(--size);
+	 top: 0;
+	 left: 0;
+	 position: absolute;
+	 transform-style: preserve-3d;
+}
+ .boxes .box:nth-child(1) {
+	 transform: translate(100%, 0);
+	 animation: box1 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(2) {
+	 transform: translate(0, 100%);
+	 animation: box2 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(3) {
+	 transform: translate(100%, 100%);
+	 animation: box3 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(4) {
+	 transform: translate(200%, 0);
+	 animation: box4 var(--duration) linear infinite;
+}
+ .boxes .box > div {
+	 --background: #7ccf7e;
+	 --top: auto;
+	 --right: auto;
+	 --bottom: auto;
+	 --left: auto;
+	 --translateZ: calc(var(--size) / 2);
+	 --rotateY: 0deg;
+	 --rotateX: 0deg;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 background: var(--background);
+	 top: var(--top);
+	 right: var(--right);
+	 bottom: var(--bottom);
+	 left: var(--left);
+	 transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+ .boxes .box > div:nth-child(1) {
+	 --top: 0;
+	 --left: 0;
+}
+ .boxes .box > div:nth-child(2) {
+	 --background: #3e8840;
+	 --right: 0;
+	 --rotateY: 90deg;
+}
+ .boxes .box > div:nth-child(3) {
+	 --background: #5bc35d;
+	 --rotateX: -90deg;
+}
+ .boxes .box > div:nth-child(4) {
+	 --background: #dbe3f4;
+	 --top: 0;
+	 --left: 0;
+	 --translateZ: calc(var(--size) * 3 * -1);
+}
+ @keyframes box1 {
+	 0%, 50% {
+		 transform: translate(100%, 0);
+	}
+	 100% {
+		 transform: translate(200%, 0);
+	}
+}
+ @keyframes box2 {
+	 0% {
+		 transform: translate(0, 100%);
+	}
+	 50% {
+		 transform: translate(0, 0);
+	}
+	 100% {
+		 transform: translate(100%, 0);
+	}
+}
+ @keyframes box3 {
+	 0%, 50% {
+		 transform: translate(100%, 100%);
+	}
+	 100% {
+		 transform: translate(0, 100%);
+	}
+}
+ @keyframes box4 {
+	 0% {
+		 transform: translate(200%, 0);
+	}
+	 50% {
+		 transform: translate(200%, 100%);
+	}
+	 100% {
+		 transform: translate(100%, 100%);
+	}
+}
+ html {
+	 -webkit-font-smoothing: antialiased;
+}
+ * {
+	 box-sizing: border-box;
+}
+ *:before, *:after {
+	 box-sizing: border-box;
+}
+ 
+    </style></div>
+                                        
+                                        
+                                     </div>
+                                     <div id="codigoMaquinaAltera" style="display: none"></div>
+                                     
+                                       
+                                    
+                                    
+                                        <div id="DivAguardeVoltar" style="display: none">
+                                         
+                                           
+                                            <h5>Aguarde!</h5>
+                                            <p>Comunicando com o servidor</p>
+                                        <div id="includloading"><div class="boxes" style=" margin: auto; margin-top: 40%;">
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+<style>
+ .boxes {
+	 --size: 32px;
+	 --duration: 800ms;
+	 height: calc(var(--size) * 2);
+	 width: calc(var(--size) * 3);
+	 position: relative;
+	 transform-style: preserve-3d;
+	 transform-origin: 50% 50%;
+	 margin-top: calc(var(--size) * 1.5 * -1);
+	 transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+}
+ .boxes .box {
+	 width: var(--size);
+	 height: var(--size);
+	 top: 0;
+	 left: 0;
+	 position: absolute;
+	 transform-style: preserve-3d;
+}
+ .boxes .box:nth-child(1) {
+	 transform: translate(100%, 0);
+	 animation: box1 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(2) {
+	 transform: translate(0, 100%);
+	 animation: box2 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(3) {
+	 transform: translate(100%, 100%);
+	 animation: box3 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(4) {
+	 transform: translate(200%, 0);
+	 animation: box4 var(--duration) linear infinite;
+}
+ .boxes .box > div {
+	 --background: #7ccf7e;
+	 --top: auto;
+	 --right: auto;
+	 --bottom: auto;
+	 --left: auto;
+	 --translateZ: calc(var(--size) / 2);
+	 --rotateY: 0deg;
+	 --rotateX: 0deg;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 background: var(--background);
+	 top: var(--top);
+	 right: var(--right);
+	 bottom: var(--bottom);
+	 left: var(--left);
+	 transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+ .boxes .box > div:nth-child(1) {
+	 --top: 0;
+	 --left: 0;
+}
+ .boxes .box > div:nth-child(2) {
+	 --background: #3e8840;
+	 --right: 0;
+	 --rotateY: 90deg;
+}
+ .boxes .box > div:nth-child(3) {
+	 --background: #5bc35d;
+	 --rotateX: -90deg;
+}
+ .boxes .box > div:nth-child(4) {
+	 --background: #dbe3f4;
+	 --top: 0;
+	 --left: 0;
+	 --translateZ: calc(var(--size) * 3 * -1);
+}
+ @keyframes box1 {
+	 0%, 50% {
+		 transform: translate(100%, 0);
+	}
+	 100% {
+		 transform: translate(200%, 0);
+	}
+}
+ @keyframes box2 {
+	 0% {
+		 transform: translate(0, 100%);
+	}
+	 50% {
+		 transform: translate(0, 0);
+	}
+	 100% {
+		 transform: translate(100%, 0);
+	}
+}
+ @keyframes box3 {
+	 0%, 50% {
+		 transform: translate(100%, 100%);
+	}
+	 100% {
+		 transform: translate(0, 100%);
+	}
+}
+ @keyframes box4 {
+	 0% {
+		 transform: translate(200%, 0);
+	}
+	 50% {
+		 transform: translate(200%, 100%);
+	}
+	 100% {
+		 transform: translate(100%, 100%);
+	}
+}
+ html {
+	 -webkit-font-smoothing: antialiased;
+}
+ * {
+	 box-sizing: border-box;
+}
+ *:before, *:after {
+	 box-sizing: border-box;
+}
+ 
+    </style></div>
+                                        </div>  
+                                     
+                                     
+                                     <div id="DivContador" class="DivContadorB novaDivContador" style="display: none; ">                                         
+                                            <div id="TempoRestante"></div>
+                                            <center>  
+                                                
+                                                <div id="AvisoHome" style=" display: none">     
+                                                      <br><br><br><h2>Carregando Playlist.</h2><br>
+                                                            <div class="boxes" style=" margin: auto; margin-top: 40%;">
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+<style>
+ .boxes {
+	 --size: 32px;
+	 --duration: 800ms;
+	 height: calc(var(--size) * 2);
+	 width: calc(var(--size) * 3);
+	 position: relative;
+	 transform-style: preserve-3d;
+	 transform-origin: 50% 50%;
+	 margin-top: calc(var(--size) * 1.5 * -1);
+	 transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+}
+ .boxes .box {
+	 width: var(--size);
+	 height: var(--size);
+	 top: 0;
+	 left: 0;
+	 position: absolute;
+	 transform-style: preserve-3d;
+}
+ .boxes .box:nth-child(1) {
+	 transform: translate(100%, 0);
+	 animation: box1 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(2) {
+	 transform: translate(0, 100%);
+	 animation: box2 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(3) {
+	 transform: translate(100%, 100%);
+	 animation: box3 var(--duration) linear infinite;
+}
+ .boxes .box:nth-child(4) {
+	 transform: translate(200%, 0);
+	 animation: box4 var(--duration) linear infinite;
+}
+ .boxes .box > div {
+	 --background: #7ccf7e;
+	 --top: auto;
+	 --right: auto;
+	 --bottom: auto;
+	 --left: auto;
+	 --translateZ: calc(var(--size) / 2);
+	 --rotateY: 0deg;
+	 --rotateX: 0deg;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 background: var(--background);
+	 top: var(--top);
+	 right: var(--right);
+	 bottom: var(--bottom);
+	 left: var(--left);
+	 transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+ .boxes .box > div:nth-child(1) {
+	 --top: 0;
+	 --left: 0;
+}
+ .boxes .box > div:nth-child(2) {
+	 --background: #3e8840;
+	 --right: 0;
+	 --rotateY: 90deg;
+}
+ .boxes .box > div:nth-child(3) {
+	 --background: #5bc35d;
+	 --rotateX: -90deg;
+}
+ .boxes .box > div:nth-child(4) {
+	 --background: #dbe3f4;
+	 --top: 0;
+	 --left: 0;
+	 --translateZ: calc(var(--size) * 3 * -1);
+}
+ @keyframes box1 {
+	 0%, 50% {
+		 transform: translate(100%, 0);
+	}
+	 100% {
+		 transform: translate(200%, 0);
+	}
+}
+ @keyframes box2 {
+	 0% {
+		 transform: translate(0, 100%);
+	}
+	 50% {
+		 transform: translate(0, 0);
+	}
+	 100% {
+		 transform: translate(100%, 0);
+	}
+}
+ @keyframes box3 {
+	 0%, 50% {
+		 transform: translate(100%, 100%);
+	}
+	 100% {
+		 transform: translate(0, 100%);
+	}
+}
+ @keyframes box4 {
+	 0% {
+		 transform: translate(200%, 0);
+	}
+	 50% {
+		 transform: translate(200%, 100%);
+	}
+	 100% {
+		 transform: translate(100%, 100%);
+	}
+}
+ html {
+	 -webkit-font-smoothing: antialiased;
+}
+ * {
+	 box-sizing: border-box;
+}
+ *:before, *:after {
+	 box-sizing: border-box;
+}
+ 
+    </style>                                                            
+                                            
+                                                </div>
+                                                
+                                                
+                                                <div id="BotoesContado">     
+                                            <button class="button-default" id="ajusta_treino" style=" margin-left: 5px; width: 250px; z-index: 999" onclick="alterar_treino(); ">Ajustar treino atual</button>
+                                            <button class="button-default" id="select_out_treino" style=" margin-left: 5px; width: 250px; z-index: 999" onclick="parar_treino(); pausar_ret_treino();  botao_pp(&#39;pause&#39;) ">Selecionar outro treino</button>
+                                            <button class="button-default" onclick="cancela_playlist();" id="cancela_playlist" style=" margin-left: 5px; width: 250px; display: none; z-index: 999">Cancelar Playlist</button>
+                                           
+                                            <div id="teste" style=" ">0000</div>   
+                                                </div>
+                                            </center>
+                                            
+                                            <div>
+                                                 <div style=" margin-top: 5px;"></div>
+                                                 
+                                                                              
+                                            <div id="tapaPlay" style="display: none; width: 90%; height: 150px; border: 0px solid; margin-top: 20px; position: absolute; background: transparent; z-index: 999 "></div>
+                                            
+                                            
+                                            
+                                                                                        <div id="bloco_pausa" style=" display: none">
+                                                <div style=" border: 0px solid; margin-top: 30px; height: 90px ">
+
+
+                                                    <img src="./Drillbot_files/sobrepoe.png" style="display: none; border: 0px solid;   margin-left: 50%; left: -41px; height: 82px; position: absolute; width: 82px; z-index: 999" id="sobrepoe">
+
+
+                                                    <img src="./Drillbot_files/pause.png" style=" display: show; margin-left: 50%; left: -40px; height: 80px; position: absolute; width: 80px;" id="pause" class="botao_pp" onclick=" botao_pp(&#39;play&#39;)">
+
+                                                    <img src="./Drillbot_files/Play.png" style=" display: hide;  margin-left: 50%; left: -40px; height: 80px;position: absolute; width: 80px;" id="play" class="botao_pp" onclick=" botao_pp(&#39;pause&#39;)">
+
+                                                </div>
+                                                <div style=" position: absolute; width: 90%; text-align: center">
+                                                    <!--<h5 id="aguardePause" style="display: none;  color:#FF1744 !important; font-size: 18px">Enviando comando... <br>Aguarde</h5> -->
+                                                    <h5 id="treino_pausado" style=" display: hide; color:#FF1744 !important">Máquina no modo pausa</h5>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                           
+                                            </div>
+                                     
+                                    </div>
+        </div> 
+                                    
+          
+<!-- Inicio da atualiacao -***************************************************------------------------------------------------------ -->                            
+                                    
+
+
+
+
+
+<div id="CorrigeTreino" style=" display: none">
+                                        
+                                        
+                                        
+                                      
+                                         
+                                         
+                                           <!-- Inicio da atualiacao ------------------------------------------------------- -->  
+                                            <div id="escolhaTreiono" style=" display: none;  margin-top: -25px">
+                                                <h3>Escolha o Treino <span class="numero_play"></span></h3>
+                                             <hr>
+ 
+             
+                                             <div class="single-col">
+                                                 <style>
+                                                     .styled-input-container { margin-left: 30%;}
+                                                     .styled-input-single { text-align: left; font-size: 16px; padding: 0}
+                                                     </style>
+                                                 
+                                                 
+                                                <div class="styled-input-container">
+                                                                                                        
+                                                    
+                                                    
+                                                    <div class="styled-input-single" style="" onclick="bt_treino(&#39;18:1|32:0|33:0&#39;,&#39;Smash&#39;)">
+                                                        <input type="radio" value="18:1|32:0|33:0,Smash" name="Treino" id="radio-example-5">
+                                                    <label for="radio-example-5">Smash</label>
+                                                    </div>
+                                                    
+                                                                                                        
+                                                    
+                                                    
+                                                    <div class="styled-input-single" style="" onclick="bt_treino(&#39;18:0|32:1|33:0&#39;,&#39;Esquerda&#39;)">
+                                                        <input type="radio" value="18:0|32:1|33:0,Esquerda" name="Treino" id="radio-example-3">
+                                                    <label for="radio-example-3">Esquerda</label>
+                                                    </div>
+                                                    
+                                                                                                        
+                                                    
+                                                    
+                                                    <div class="styled-input-single" style="" onclick="bt_treino(&#39;18:0|32:1|33:1&#39;,&#39;Direita - Esquerda&#39;)">
+                                                        <input type="radio" value="18:0|32:1|33:1,Direita - Esquerda" name="Treino" id="radio-example-4" checked="checked">
+                                                    <label for="radio-example-4">Direita - Esquerda</label>
+                                                    </div>
+                                                    
+                                                                                                        
+                                                    
+                                                    
+                                                    <div class="styled-input-single" style="" onclick="bt_treino(&#39;18:0|32:0|33:1&#39;,&#39;Direita&#39;)">
+                                                        <input type="radio" value="18:0|32:0|33:1,Direita" name="Treino" id="radio-example-2">
+                                                    <label for="radio-example-2">Direita</label>
+                                                    </div>
+                                                    
+                                                                                                        
+                                                    
+                                                    
+                                                    <div class="styled-input-single" style="" onclick="bt_treino(&#39;18:1|32:1|33:1&#39;,&#39;Centro&#39;)">
+                                                        <input type="radio" value="18:1|32:1|33:1,Centro" name="Treino" id="radio-example-1">
+                                                    <label for="radio-example-1">Centro</label>
+                                                    </div>
+                                                    
+                                                                                                        
+                                                    
+                                                    
+                                                    <div class="styled-input-single" style="" onclick="bt_treino(&#39;18:1|32:0|33:1&#39;,&#39;Aleatório&#39;)">
+                                                        <input type="radio" value="18:1|32:0|33:1,Aleatório" name="Treino" id="radio-example-6">
+                                                    <label for="radio-example-6">Aleatório</label>
+                                                    </div>
+                                                    
+                                                                                                     
+                                                </div>
+                                              </div>
+
+                                            <button class="button-default bt_ccconfirma" style=" width: 100px; margin-right: 5px " id="bt_confirma" onclick="bt_confirmaContinua()">Continuar</button> 
+                                             
+                                            
+                                            </div>
+                                            
+                                         
+                                           <div style=" ">
+                                               <style>
+                                                   .top30 { top: 130px; background: #fff};
+                                                   .top300 {top: -250px; background: #000};
+                                                   
+                                                 
+                                               </style>
+                                               <div id="brancoDiv" style=" height: 650px; display: none"></div>
+                                               <div id="VariacoesTreiono" class="top30" style=" display: none; z-index: 10; z-index: 10;  position: absolute;   width: 90%">
+                                                   <h3 style=""><div><span id="nome_treino"></span> <span class="numero_play"></span></div>
+                                                                </h3>
+                                                                <hr>
+                                                                
+                                                                
+                                                               <!-------------------------------------------------- -->
+                                                                 
+                                                                <div>
+    <style>
+                                                    .styled-input-container_var { border: 1px solid #005a4c; -webkit-border-radius: 10px;
+                                                    -moz-border-radius: 10px;
+                                                    border-radius: 10px; padding: 5px;}
+                                                    .styled-input-container_var .styled-input-single { text-align: left; font-size: 16px}
+
+                                                    table td, table td * {
+                                                    vertical-align: top;
+                                                    }
+                                                    
+                                                    table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0px solid black;
+  text-align: center;
+  table-layout: fixed;
+}
+td, th {
+  border: 0px solid black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+   
+  #Nprin{ border: 0px solid; width: 100%}
+  #NprinSeparador{ width: 49%; height: 100px; margin: 0px; border: 0px solid #ff0000; display: inline-block; margin-bottom: 41px; vertical-align: middle; };
+</style>
+
+    <style>
+        .radioSelect {
+    border: 5px solid #ff0000 !important;
+    width: 5px !important;
+    height: 5px !important;
+    vertical-align: middle;
+}
+    </style>
+
+
+<div id="Nprin">
+    <div id="NprinSeparador" class="someDiv">
+        <div class="single-col" id="MostraEfeito">
+                                                                                                    <div class="styled-input-container_var">
+                                                                                                           <b>Efeito</b> 
+                                                                                                          <div class="styled-input-single" style="" onclick="bt_efeito(&#39;12:0|15:0&#39;,&#39;Sem Efeito&#39;)">
+                                                                                                              <input type="radio" value="1" class="bt_efeito" name="efeito" id="efeito_sem" checked="">
+                                                                                                            <label for="efeito_sem">Sem Efeito</label>
+                                                                                                          </div>
+                                                                                                          <div class="styled-input-single" onclick="bt_efeito(&#39;12:0|15:1&#39;,&#39;Top Spin&#39;)">
+                                                                                                            <input type="radio" value="2" class="bt_efeito" name="efeito" id="efeito_top_spin">
+                                                                                                            <label for="efeito_top_spin">Top Spin</label>
+                                                                                                          </div>
+                                                                                                            <div class="styled-input-single" onclick="bt_efeito(&#39;12:1|15:0&#39;,&#39;Slice&#39;)">
+                                                                                                                <input type="radio" value="3" class="bt_efeito" name="efeito" id="efeito_slice">
+                                                                                                            <label for="efeito_slice">Slice</label>
+                                                                                                          </div>
+                                                                                                        </div>
+                                                                                                      </div>
+    </div>
+    <div id="NprinSeparador" class="someDiv">
+          <div class="single-col" id="MostraVelocidade">
+                                                                                                    <div class="styled-input-container_var">
+                                                                                                           <b>Velocidade disparo</b> 
+                                                                                                          <div class="styled-input-single" style="" onclick="bt_velocidade(&#39;25:0|22:0&#39;,&#39;Normal&#39;)">
+                                                                                                            <input type="radio" name="velocidade" id="velocidade_normal" checked="">
+                                                                                                            <label for="velocidade_normal">Normal</label>
+                                                                                                          </div>
+                                                                                                          <div class="styled-input-single" onclick="bt_velocidade(&#39;25:1|22:0&#39;,&#39;Rápida&#39;)">
+                                                                                                            <input type="radio" name="velocidade" id="velocidade_rapida">
+                                                                                                            <label for="velocidade_rapida">Rápida</label>
+                                                                                                          </div>
+                                                                                                            <div class="styled-input-single" onclick="bt_velocidade(&#39;25:0|22:1&#39;,&#39;Lenta&#39;)">
+                                                                                                            <input type="radio" name="velocidade" id="velocidade_lenta">
+                                                                                                            <label for="velocidade_lenta">Lenta</label>
+                                                                                                          </div>
+                                                                                                        </div>
+                                                                                                      </div>
+    </div>
+    <div id="NprinSeparador">
+        <div class="single-col">
+                                            <div class="styled-input-container_var">
+                                                   <b>Intervalo de disparo</b> 
+                                                                                               
+                                                  <div class="styled-input-single" style=" display: none" onclick="bt_intervalo(&#39;21:0|13:0&#39;,&#39;1 Segundos&#39;)">
+                                                      <input type="radio" class="radioSelect" name="intervalo" id="intervalo_1">
+                                                    <label for="intervalo_1">1 Segundo</label>
+                                                  </div>
+                                                  <div class="styled-input-single" onclick="bt_intervalo(&#39;21:0|13:1&#39;,&#39;2 Segundos&#39;)">
+                                                      <input type="radio" class="radioSelect" name="intervalo" id="intervalo_2">
+                                                    <label for="intervalo_2">2 Segundos</label>
+                                                  </div>
+                                                    <div class="styled-input-single" onclick="bt_intervalo(&#39;21:1|13:0&#39;,&#39;3 Segundos&#39;)">
+                                                    <input type="radio" class="radioSelect" name="intervalo" id="intervalo_3" checked="">
+                                                    <label for="intervalo_3">3 Segundos</label>
+                                                  </div>
+                                                   
+                                                    <div class="styled-input-single" onclick="bt_intervalo(&#39;21:1|13:1&#39;,&#39;4 Segundos&#39;)">
+                                                    <input type="radio" class="radioSelect" name="intervalo" id="intervalo_4">
+                                                    <label for="intervalo_4">4 Segundos</label>
+                                                  </div>
+                                                   
+                                                   
+                                                </div>
+                                              </div>
+    </div>
+    <div id="NprinSeparador" class="someDiv">
+              <div class="single-col" id="MostraTrajetoria">
+                                                <div class="styled-input-container_var">
+                                                   <b>Trajetoria da bola</b> 
+                                                  <div class="styled-input-single" style="" onclick="bt_trajetoria(&#39;0:0&#39;,&#39;Bola normal&#39;)">
+                                                    <input type="radio" name="trajetoria" id="trajetoria_normal" checked="">
+                                                    <label for="trajetoria_normal">Bola normal</label>
+                                                  </div>
+                                                  <div class="styled-input-single" onclick="bt_trajetoria(&#39;0:1&#39;,&#39;Bola Alta&#39;)">
+                                                    <input type="radio" name="trajetoria" id="trajetoria_alta">
+                                                    <label for="trajetoria_alta">Bola Alta</label>
+                                                  </div>
+                                                   
+                                                </div>
+                                              </div>
+    </div>
+    <div id="NprinSeparador" class="someDiv">
+        <div id="MostraPosicao">
+                                                <center>
+                                                 <b>Variação de posição</b> 
+                                                  </center>
+                                                 <style>
+                                                     .toggler-wrapper {
+	display: block;
+	width: 100px;
+	height: 4px;
+	cursor: pointer;
+	position: relative;
+       
+}
+
+.toggler-wrapper input[type="checkbox"] {
+	display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+	background-color: #ccc;
+}
+
+.toggler-wrapper .toggler-slider {
+	background-color: #ccc;
+	position: absolute;
+	border-radius: 100px;
+	top: 21px;
+	left: -24px;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+	position: absolute;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+
+
+
+.toggler-wrapper.style-15 {
+	left: 50px;
+}
+
+.toggler-wrapper.style-15 input[type="checkbox"]:checked+.toggler-slider:before {
+	opacity: 0.5;
+}
+
+.toggler-wrapper.style-15 input[type="checkbox"]:checked+.toggler-slider:after {
+	opacity: 1;
+}
+
+.toggler-wrapper.style-15 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+	left: calc(100% - 19px - 3px);
+}
+
+.toggler-wrapper.style-15 .toggler-slider:before {
+	content: 'Normal';
+	position: absolute;
+	top: 30px;
+	left: -30px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	
+	text-transform: uppercase;
+	font-weight: 500;
+        font-size: 15px
+}
+
+.toggler-wrapper.style-15 .toggler-slider:after {
+	content: 'Duplo';
+	position: absolute;
+	top: 30px;
+	right: -15px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 75%;
+	text-transform: uppercase;
+	font-weight: 500;
+        font-size: 15px
+}
+
+.toggler-wrapper.style-15 .toggler-knob {
+	width: calc(20px - 6px);
+    height: calc(20px - 6px);
+    border-radius: 50%;
+    left: 3px;
+    top: -5px;
+    background-color: #26a69a;
+}
+
+                                                     
+                                                 </style>
+                                                 <div style=" ">
+                                                    <!-- Toggle Button Style 15 -->
+                                                    <label class="toggler-wrapper style-15">
+                                                      <input type="checkbox" id="bt_variacao" onclick="bt_variacao()">
+                                                      <div class="toggler-slider">
+                                                        <div class="toggler-knob"></div>
+                                                      </div>
+                                                    </label>
+
+                                                  </div>
+        </div>
+    </div>
+    <div id="NprinSeparador">
+        <center><b>Pressão da bola</b>
+<p class="range-field" style=" width:90%">
+    <style>
+    .thumb { display: none}
+    #new_posicao_bola { font-size: 15px}
+    
+   
+    
+    </style>
+    
+      
+    
+                                                  <input type="range" id="RangeFilter" name="points" onchange="filterme(this.value);" min="1" class="rangeAll" max="2" value="2"><span class="thumb"><span class="value"></span></span>
+                                                </p>
+                                               
+                                                <span id="new_posicao_bola"> NORMAL </span> 
+                                                </center>
+    </div>
+</div>                            
+                                     
+                                        </div>
+                                                               <!-- ----------------------------------------------- -->
+                                                               <div style=" margin-top: -30px">
+              <center>
+                  
+                   
+
+                  
+                  <button class="button-default bt_final_playlist" style=" width: 100px; margin-right: 5px " id="bt_confirmarr" onclick="bt_confirma()">Confirmar</button>                  
+                  <button class="button-default bt_salva_playlist" style=" width: 150px; margin-right: 5px; display: none" onclick="bt_salva_playlist()">Salvar <span class="numero_play"></span> </button>                  
+                  <button class="button-default" style=" width: 180px; margin-right: 5px; display: none " id="bt_alteraTreino" onclick="bt_confirmaAltera()">Confirmar Alteração</button> 
+                  
+                  
+                  
+                  <button class="button-default" style=" margin-left: 5px; width: 100px" id="btVoltar" onclick="voltar_treino()">Voltar</button></center>
+          </div>
+                                                               <div style=" height: 150px; "></div>
+                                                            </div>
+
+                                             
+                                             
+                                             
+                                            </div>
+                                          
+                                          <br><br><br>   
+                                         
+                                    </div>
+                                    
+                            
+			</div>
+		</div>
+	</div>
+      
+              
+    <script>
+ 
+      //  navigator.mediaDevices.getUserMedia({video: true})
+      //  .then(function (mediaStream) {
+           // alert('Ok')
+      //  })
+     //   .catch(function (err) {
+     //      alert('Verificamos que sua câmera não está com a permissão necessária.\n\n\nAo solicitar o acesso a camera, cliquem em permitir, caso isso nao aconteca, clique em FAQ e vá em configurações de câmera para ativar')
+     //   })      
+       
+    </script>
+        
+      <script>
+          
+          
+        
+  localStorage.setItem('PlayList','N');
+          
+         
+                  
+
+        function bt_treino(id,nomeTreino) {
+            
+          //  alert(id);
+          //   alert(nomeTreino);
+          
+         
+          $("#txt_bt_nome_treino").html(nomeTreino); 
+            
+            if(nomeTreino === "Smash"){
+                
+                $('#MostraPosicao').hide() ;
+                $('#MostraEfeito').hide() ;
+                $('#MostraVelocidade').hide() ;
+                $('#MostraTrajetoria').hide() ;
+            } else {
+                $('#MostraPosicao').show();
+                $('#MostraEfeito').show();
+                $('#MostraVelocidade').show();
+                $('#MostraTrajetoria').show();
+                
+            }
+            
+            $("#nome_treino").html(nomeTreino); 
+            $("#txt_bt_nome_treino").html(nomeTreino); 
+            
+            $("#tipo_de_treino").html(id); 
+            
+           // $('#escolhaTreiono').slideUp('fast');
+           // $('#VariacoesTreiono').slideDown('fast');
+               // alert("923");           
+        } 
+  
+  
+    function bt_confirmaContinua() {
+        // #######
+         //alert("Aqui...........");
+         // alert();
+         
+         var num_playlist = $('#id_playlist option:selected').val();
+         
+        if(num_playlist == '1'){            
+            $('#bt_abre_playlist').hide();
+        } 
+        
+        var playSession = localStorage.getItem('PlayList');
+                    
+                if(playSession === "S"){
+                    
+                    //$('#escolhaTreiono').slideUp('fast');
+                    //$("#escolhaTreiono").hide();
+                    console.log('Aqui')
+
+                    if(num_playlist === '1'){
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Selecione quantos treinos deseja realizar!"
+                          });
+                        var ContinuaPlay = 'bloq';
+                        $('#bt_abre_playlist').show();
+                    } else {
+                        var ContinuaPlay = 'pass';
+                    }
+                    
+                } else {
+                    var ContinuaPlay = 'pass';
+                }
+                    
+                    
+                    
+                    
+       if(ContinuaPlay == "pass"){
+        
+        
+        
+            var pega_trenno = $('input[name=Treino]:checked').val(); 
+         
+            var myArray = pega_trenno.split(",");
+
+         
+            $("#nome_treino").html(myArray[1]); 
+            $("#tipo_de_treino").html(myArray[0]); 
+           
+          // alert("951");
+         
+         
+          var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+             
+             
+            // alert(tipo_comunicacao);
+            
+         
+          $('#escolhaTreiono').slideUp('fast');
+         //  $('#DivContador').delay( 1000 ).slideDown('fast');
+          $('#VariacoesTreiono').slideDown('fast');
+          $('#brancoDiv').slideDown('fast');
+          
+         
+            if(tipo_comunicacao === "addGet"){
+             } else {
+                  
+                   $("#VariacoesTreiono").toggleClass("top300");
+                 //  alert('Aqui')
+                   $('#brancoDiv').show();
+                  //$('#DivContador').delay( 15000 ).slideDown('fast');
+             }
+         }
+    }
+    
+    
+    
+      function cancela_playlist(){ 
+                                
+                                
+                             var cod_play = $("#playCod").text(); 
+                            $.get( "api/cancela_playlist.php?cod="+cod_play+"&acao=valor", function( data ) {                
+                                    // alert("Data: " + data );
+                                     console.log(data);
+                                    //$("#escreve_verifica_playlist").text(data); 
+                                     var ret = data.split("|");
+                                    
+                            Swal.fire({
+                                title: "Cancelar Playlist!",
+                                icon: "info",
+                                html: "Deseja realmente cancelar esta Playlist?<br> <div  style=font-size: 12px> Voce tera um reembolso de <b>R$"+ret[1]+"</b> referentes a <b>"+ret[0]+" minutos</b> do tempo restante <div>",
+                                showCancelButton: true,
+                                confirmButtonColor: '#4caf50',
+                                confirmButtonText: "Sim, cancelar playlist",
+                                cancelButtonText: "Não cancelar"
+                              }).then((result) => {
+                                if (result.isConfirmed) {
+                                  Swal.fire("Tudo certo!", "Playlist cancelada com sucesso!", "success");
+                                   
+                                    $.get( "api/cancela_playlist.php?cod="+cod_play+"&valor="+ret[1]+"&acao=retira", function( data ) { 
+                                       // alert(data)
+                                       
+                                         console.log(data);
+                                            setTimeout(function() {
+                                              window.location.href = "inicial.php";
+                                            }, 1000);
+                                        
+                                    });
+                                    
+                                } 
+                            });
+                            }); 
+          
+            
+      }
+                   
+                   function verifica_playlist(){                  
+                            $.get( "api/exe.php?funcao=verificaPlaylist", function( data ) {                
+                                    // alert("Data: " + data );
+                                    $("#escreve_verifica_playlist").text(data); 
+                            });    
+                           
+                    }              
+
+                    // contador = setInterval(verifica_playlist, 1000);
+    
+    
+    
+    
+   function bt_abre_playlist() {
+       var codigoMaquina = $(".codigoMaquina").text();  
+       var num_playlist = $('#id_playlist option:selected').val();
+       
+       
+        var tempo_select = $(".Tempo_escolhido").text();
+    
+        $.get( "api/exe.php?funcao=criaPlaylist&maquina="+codigoMaquina+"&tempo="+tempo_select+"&qtd="+num_playlist, function( data ) {                
+               // alert(data);
+               
+               $("#cod_playlist").html(data)
+                
+        });
+       $('#abre_playlist').slideDown('fast');
+       $('#bt_abre_playlist').slideUp('fast');
+       
+       $('.bt_final_playlist').slideUp('fast');       
+       $('.bt_salva_playlist').slideDown('fast');
+       
+       $('#escolhaTreiono').slideDown('fast');
+       
+                //("#carregaPlaylistbd").load("carregaPlaylistbd.php?controle_acesso=100");  
+                function ContaTempo(){                  
+                   $("#carregaPlaylistbd").load("carregaPlaylistbd.php?controle_acesso=100");
+                   $('#bt_abre_playlist').hide();
+                   //$("#numero_play").load("carregaPlaylistQtd.php?controle_acesso=100");
+                }              
+
+                contador = setInterval(ContaTempo, 1000); 
+       
+       
+       
+   }  
+   
+   
+       function bt_salva_playlist() {
+          
+            var pega_trenno = $('input[name=Treino]:checked').val(); 
+         
+            var myArray = pega_trenno.split(",");
+            
+            
+             var codigoMaquina = $(".codigoMaquina").text();   
+             var tempo_select = $(".Tempo_escolhido").text(); 
+              
+             var tipo_de_treino = $("#tipo_de_treino").text(); 
+             var txt_bt_variacao = $("#txt_bt_variacao").text(); 
+             var txt_bt_efeito = $("#txt_bt_efeito").text(); 
+             var txt_bt_velocidade = $("#txt_bt_velocidade").text(); 
+             var txt_bt_intervalo = $("#txt_bt_intervalo").text(); 
+             var txt_bt_trajetoria = $("#txt_bt_trajetoria").text(); 
+             var txt_bt_pressao = $("#txt_bt_pressao").text(); 
+             var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+
+
+                var junta_arduino = tipo_de_treino+"|"+txt_bt_variacao+"|"+txt_bt_efeito+"|"+txt_bt_velocidade+"|"+txt_bt_intervalo+"|"+txt_bt_trajetoria+"|"+txt_bt_pressao
+              
+            //alert(tipo_comunicacao + '  ' + junta_arduino)
+            
+            
+             $.get( "api/exe.php?funcao=addPlaylist&maquina="+codigoMaquina+"&Tempo="+tempo_select+"&juntaArduino="+junta_arduino, function( data ) { 
+                 
+               //  alert(data);
+                 
+                var variaveis = data.split("-");
+                if(variaveis[0] === "fim"){
+                    
+                    var playSession = localStorage.getItem('PlayList');
+                    
+                    if(playSession == "S"){
+                        
+                        var cod_playlist = $("#cod_playlist").text(); 
+                        console.log('----------Cobre Tela');
+                        $('#fakeLoader').show();
+                        
+                        window.location.href = "ver_playlist.php?acao=definir&codigo="+variaveis[1]+"&tempo=livre";
+                    } else {
+                        window.location.href = "ver_playlist.php?acao=definir&codigo="+variaveis[1]+"&tempo=definido";
+                    }
+                    
+                    //
+                }
+                
+                $('#VariacoesTreiono').slideUp('fast');
+                $('#btRecargaIni').slideUp('fast');
+                $('#escolhaTreiono').slideDown('fast');
+                $('#btVoltar').slideDown('fast');
+                $('#BotoesContado').slideDown('fast');              
+               
+                $("#playlist_"+data).removeAttr('disabled');
+                $("#playlist_"+data).prop('checked',true);
+            });
+         
+         //   $("#nome_treino").html(myArray[1]); 
+         //   $("#tipo_de_treino").html(myArray[0]); 
+           
+          // alert("951");
+         
+         
+       //   var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+             
+             
+            // alert(tipo_comunicacao);
+            
+         
+       //   $('#escolhaTreiono').slideUp('fast');
+         //  $('#DivContador').delay( 1000 ).slideDown('fast');
+         // $('#VariacoesTreiono').slideDown('fast');
+         // $('#brancoDiv').slideDown('fast');
+          
+         
+         //   if(tipo_comunicacao === "addGet"){
+            // } else {
+                  
+            //       $("#VariacoesTreiono").toggleClass("top300");
+                 //  alert('Aqui')
+              //     $('#brancoDiv').show();
+                  //$('#DivContador').delay( 15000 ).slideDown('fast');
+           //  }
+           
+    }
+   
+   
+   
+  function bt_confirmaAltera() {
+           
+            $('#Bloco_ativacao').slideUp('fast');
+            $('#CorrigeTreino').slideUp('fast');
+            $('.navbar-top').slideUp('fast');            
+            $('#Bloco_Envio').slideDown('fast');      
+            $('#VariacoesTreiono').slideUp('fast');
+            $('#TempoRestanteRet').slideUp('fast');    
+            //$('#TempoRestante').slideDown('fast');
+            
+                    
+             var codigoMaquina = $(".codigoMaquina").text();        
+             var tempo_select = $(".Tempo_escolhido").text(); 
+              
+             var tipo_de_treino = $("#tipo_de_treino").text(); 
+             var txt_bt_variacao = $("#txt_bt_variacao").text(); 
+             var txt_bt_efeito = $("#txt_bt_efeito").text(); 
+             var txt_bt_velocidade = $("#txt_bt_velocidade").text(); 
+             var txt_bt_intervalo = $("#txt_bt_intervalo").text(); 
+             var txt_bt_trajetoria = $("#txt_bt_trajetoria").text(); 
+             var txt_bt_pressao = $("#txt_bt_pressao").text(); 
+             var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+             
+             
+             var junta_arduino = tipo_de_treino+"|"+txt_bt_variacao+"|"+txt_bt_efeito+"|"+txt_bt_velocidade+"|"+txt_bt_intervalo+"|"+txt_bt_trajetoria+"|"+txt_bt_pressao
+              
+         //   alert(codigoMaquina + ' - ' + tempo_select)
+            
+            $.get( "api/exe.php?funcao="+tipo_comunicacao+"&maquina="+codigoMaquina+"&Tempo="+tempo_select+"&juntaArduino="+junta_arduino, function( data ) {                
+                
+            });
+        }   
+   
+   
+   
+        function bt_confirma() {
+           
+            
+            
+            
+            
+             var codigoMaquina = $(".codigoMaquina").text();   
+             var tempo_select = $(".Tempo_escolhido").text(); 
+              
+             var tipo_de_treino = $("#tipo_de_treino").text(); 
+             var txt_bt_variacao = $("#txt_bt_variacao").text(); 
+             var txt_bt_efeito = $("#txt_bt_efeito").text(); 
+             var txt_bt_velocidade = $("#txt_bt_velocidade").text(); 
+             var txt_bt_intervalo = $("#txt_bt_intervalo").text(); 
+             var txt_bt_trajetoria = $("#txt_bt_trajetoria").text(); 
+             var txt_bt_pressao = $("#txt_bt_pressao").text(); 
+             var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+             
+             //alert(txt_bt_efeito);
+           //   var tipo_comunicacao = 'nada'; 
+            // alert(tipo_comunicacao);
+             if(tipo_comunicacao === "addGet"){
+                
+                //$('.novaDivContador').slideUp('fast');
+                $('#Bloco_ativacao').slideUp('fast');
+                $('#CorrigeTreino').slideUp('fast');
+                $('.navbar-top').slideUp('fast');            
+                $('#Bloco_Envio').slideDown('fast');      
+                $('#VariacoesTreiono').slideUp('fast');
+                $('#TempoRestanteRet').slideUp('fast');    
+                
+               // alert('00000');
+                 
+             } 
+             else {
+                //alert('qqqq');
+                  //$('.novaDivContador').slideUp('fast');
+                 $('#Bloco_ativacao').slideUp('fast');
+                $('#CorrigeTreino').slideUp('fast');
+               // $('.navbar-top').slideUp('fast');            
+                //$('#Bloco_Envio').slideDown('fast');      
+                $('#VariacoesTreiono').slideUp('fast');
+                $('#TempoRestanteRet').slideUp('fast');
+                $('#DivContador').slideUp('fast');
+                
+                $('#DivAguardeVoltar').slideDown('fast');
+                 $('#DivAguardeVoltar').delay( 500 ).slideUp('fast');
+                // $('#comAtualizacao').delay( 149000 ).slideUp('fast');
+              //   $('.navbar-top').delay( 15000 ).slideDown('fast'); 
+                 $('#Bloco_Envio').delay( 500 ).slideUp('fast');
+                $('#DivContador').delay( 500 ).slideDown('fast');
+                 // $('#DivContadorB').slideUp('fast');
+                 
+                
+                // alert('Aqui 15')
+             }
+             
+             
+            // $('#DivContador').slideDown('fast');
+            // $('#bt_confirma').slideUp('fast');
+            // $('#bt_alteraTreino').slideDown('fast');
+             
+             
+             var junta_arduino = tipo_de_treino+"|"+txt_bt_variacao+"|"+txt_bt_efeito+"|"+txt_bt_velocidade+"|"+txt_bt_intervalo+"|"+txt_bt_trajetoria+"|"+txt_bt_pressao
+              
+           // alert(tipo_comunicacao + '  ' + junta_arduino)
+            
+            $.get( "api/exe.php?funcao="+tipo_comunicacao+"&maquina="+codigoMaquina+"&Tempo="+tempo_select+"&juntaArduino="+junta_arduino+"&efeito_bola="+txt_bt_efeito, function( data ) {                
+                
+            });
+        }    
+       
+                    
+         
+        function clica_camera() {
+           troca_camera(2);
+        }    
+        
+          function voltar_treino(){
+            $('#VariacoesTreiono').slideUp('fast');
+             $('#btRecargaIni').slideUp('fast');
+            $('#escolhaTreiono').slideDown('fast');
+            $('#btVoltar').slideDown('fast');
+            $('#BotoesContado').slideDown('fast');
+            $('#bt_abre_playlist').show();
+       
+        }
+        function alterar_treino(){
+              var btnome_treino = $("#NomeTreinoBD").text(); 
+               $("#nome_treino").html(""); 
+             //  alert("");
+            
+            $('.someDiv').slideUp('fast');
+            $('#DivContador').slideUp('fast');
+            $('#DivAguardeVoltar').slideDown('fast');
+            $('#btVoltar').slideUp('fast');
+            $('#BotoesContado').slideDown('fast');
+             
+             
+             
+             // var codigoMaquinaAltera = $("#codigoMaquinaAltera").text(); 
+             // $("#tipo_comunicacao").html("AlteraTreino|"+data);
+             // 
+             // 
+             // 
+             // 
+         //   var codigoMaquina = $(".codigoMaquina").text();   
+        //     var tempo_select = $(".Tempo_escolhido").text(); 
+         //     var codigoMaquinaAltera = $("#codigoMaquinaAltera").text(); 
+            
+        //     var txt_bt_velocidade = $("#txt_bt_velocidade").text(); 
+         //    var txt_bt_pressao = $("#txt_bt_pressao").text(); 
+             
+             
+             
+           //   var tipo_de_treino_fi = $("#tipo_de_treino").text(); 
+          //   var txt_bt_variacao = $("#txt_bt_variacao").text(); 
+           //  var txt_bt_efeito = $("#txt_bt_efeito").text(); 
+           //  var txt_bt_velocidade = $("#txt_bt_velocidade").text(); 
+          //   var txt_bt_intervalo = $("#txt_bt_intervalo").text(); 
+           //  var txt_bt_trajetoria = $("#txt_bt_trajetoria").text(); 
+          //   var txt_bt_pressao = $("#txt_bt_pressao").text(); 
+           //  var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+             
+             
+             $('#DivAguardeVoltar').slideUp('fast');
+             $('#CorrigeTreino').slideDown('fast');
+             $('#TempoRestanteRet').slideDown('fast');
+             $('#btRecargaIni').slideUp('fast');
+                 
+             $('#escolhaTreiono').slideUp('fast');
+             $('#DivContadorB').slideUp('fast');
+             $('#VariacoesTreiono').slideDown('fast');
+             var codigoMaquinaAltera = $("#codigoMaquinaAltera").text();
+                // alert(codigoMaquinaAltera);
+             $.get( "api/exe.php?funcao=TrocaTreino&maquina="+codigoMaquinaAltera, function( data ) {
+                     
+                     
+             //var codigoMaquina = $(".codigoMaquina").text();  
+            // alert(data);
+              $("#tipo_comunicacao").html("AlteraTreino|"+data);
+                    });
+                 
+                 
+                
+                // alert(codigoMaquinaAltera);
+                 
+             //     var junta_arduino = tipo_de_treino_fi+"|"+txt_bt_variacao+"|"+txt_bt_efeito+"|"+txt_bt_velocidade+"|"+txt_bt_intervalo+"|"+txt_bt_trajetoria+"|"+txt_bt_pressao
+              
+           // alert(junta_arduino +" ---  "+ codigoMaquinaAltera)
+            
+           // $.get( "api/exe.php?funcao=AlteraTreinoVolta&comando_tabela_treino="+codigoMaquina+"&juntaArduino="+junta_arduino, function( data ) {                
+                
+          //  });
+            
+        }
+        
+        
+        
+    function pausar_ret_treino(){
+        $('#treino_pausado').hide(); 
+        $("#botonplay").addClass("active");
+        var acao_treino = "play"; 
+    }
+    
+    function botao_pp(acao){
+        //alert(acao)
+         var codigoMaquinaAltera = $("#codigoMaquinaAltera").text(); 
+          
+         // alert(codigoMaquinaAltera);
+          
+         // alert(acao) 
+          
+        if(acao == "play"){
+            
+        // alert()   
+         // $('#txt_bt_efeito').html("12:1|15:1");
+          
+          $('#sobrepoe').show(); 
+          $('#pause').fadeOut(500);
+          $('#play').fadeIn(500);
+          var acao_treino = "pausa"; 
+          $('#aguardePause').show();
+          
+          setTimeout(function() {
+            $("#aguardePause").fadeOut(500);
+            }, 500);
+           setTimeout(function() {
+            $("#treino_pausado").fadeIn(500);
+            $('#sobrepoe').fadeOut(500); 
+            }, 500); 
+            
+        } else {
+        //  $('#txt_bt_efeito').html("12:0|15:0");  
+          $('#sobrepoe').show(); 
+          $('#pause').fadeIn(500);
+          $('#play').fadeOut(500);
+          var acao_treino = "play"; 
+             setTimeout(function() {
+            $("#treino_pausado").fadeOut(500);
+            
+            }, 500); 
+            
+            setTimeout(function() {
+            $('#sobrepoe').fadeOut(500); 
+            }, 500);
+            
+        }
+          
+                $.get( "api/exe.php?funcao=TrocaTreino&maquina="+codigoMaquinaAltera, function( data ) {
+                       // alert(data+ " == " + acao_treino )
+                       var cod_play = $("#playCod").text();
+
+                        $.get( "api/exe.php?funcao=pausaTreino&comando_tabela_treino="+data+"&comando="+acao_treino+"&cod_play="+cod_play, function( data ) {                
+                          // alert(cod_play+' - ' + data)
+                        });
+            
+                     
+                 });     
+   // -------------------------------------------------------------------------------------   
+                
+        
+        
+    }
+    
+    
+    
+    function add_new_play(){
+                localStorage.setItem('PlayList','S');
+              console.log('Sobe Class');
+              $('#bt_abre_playlist').show();
+             // $('#bt_abre_playlist').Show();
+                        var playSession = localStorage.getItem('PlayList');
+                        console.log('Sube = ' + playSession);
+                        if(playSession === "S"){                    
+                            
+                                $('#selectComboTempo').slideUp('fast');
+                                $('#CorrigeTreino').slideDown('fast');
+                                $('#btRecargaIni').slideUp('fast');
+                                $('.quadro_playlist').slideDown('fast');
+                                $('#bt_confirma').slideDown('fast');
+                                $('.Tempo_escolhido').html('26');
+                                $('#escolhaTreiono').slideUp('fast');
+                                
+                               // $(".quadro_playlist").css("margin-top", "0");
+                                
+                                $('.quadro_playlist').toggleClass('top_quadro_playlist_350 top_quadro_playlist_0');
+                        }
+                        $('.escolha_recarga').slideUp('fast');
+                        $('.botao_inicial').slideUp('fast');
+                        $('.txtQr').slideUp('fast');
+                        $('.btRecargaIni').slideUp('fast');
+                        $('.botao_camera').slideUp('fast');
+                        //$('.escolha_recarga').slideDown('fast');
+                        
+                        $('#id_playlist').children('option[value="1"]').attr('disabled','disabled').text("Selecione a quantidade de treinos");;
+                        
+                        var content = '0-OFFLINE-0';     
+
+                            $.get( "api/retornaMaquina.php?codigo="+content+"&sessao=100", function( data ) {                            
+                            // alert(data)
+                            var variaveis = data.split("|");
+                            //  alert(variaveis[1])
+                            
+                            if(variaveis[1] === 'erro'){
+                               // alert("em uso")
+                               
+                                    $('#btRecargaIni').slideUp('fast');
+                                    $('#Bloco_Envio').slideUp('fast');  
+                                    $('.botao_camera').slideUp('fast');  
+                                    
+                                    var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+                                    
+                                    alert(tipo_comunicacao + " Segundo");
+                                    if(tipo_comunicacao != "addGet"){
+                                         
+                                     } else {
+                                     $('#Bloco_Envio').slideUp('fast');  
+                                    $('.navbar-top').slideDown('fast');     
+                                    $('#DivContador').slideDown('fast');   
+                                   // alert('slideDown');
+                                    $('#codigoMaquinaAltera').html(content);
+                                     }
+                                    // $('#DivContador').slideDown('fast'); // 8888888888888888888
+                                    function contaRegressiva(){
+                                        $('#TempoRestante').load('api/contador.php?maquina='+content+'&funcao=VerificaGet&font=');
+                                    }              
+
+                                    contador = setInterval(contaRegressiva, 1000);
+                                    
+                             } else if(variaveis[1] === 'inexistente'){
+                              // alert("Liberada")
+                                    $('#clickCamera').slideDown('fast'); 
+                                     $('.txtQr').slideDown('fast');
+                                    $('.botao_camera').slideUp('fast');  
+                                    //$('.escolha_recarga').slideUp('fast');
+                                    
+                                    alert('Codigo inexistente');
+                                   
+                                    
+                                    
+                                    
+                            } else if(variaveis[1] === 'bloqueia'){
+                              // alert("Liberada")
+                                    $('#clickCamera').slideDown('fast'); 
+                                     $('.txtQr').slideDown('fast');
+                                    $('.botao_camera').slideUp('fast');  
+                                  //  $('.escolha_recarga').slideUp('fast');
+                                    
+                                    alert('Equipamento em uso');
+                                   
+                                    
+                                    
+                                    
+                            } else {
+                                // $(".result").html( data );
+                                // alert(variaveis[1]);
+                                 $('.codigoMaquina').html(variaveis[1]);
+                                 $('#codigoMaquinaAltera').html(variaveis[1]);
+                                 $('.NomeClube').html(variaveis[2]);
+
+                                 $('.botao_camera').slideUp('fast');
+                                // $('.escolha_recarga').slideDown('fast');
+                            }
+                        });
+                        console.log($.session.get('PlayList'));
+    }
+    
+
+    
+    
+    
+    
+     
+        function pausar_treinos(){
+          $('#treino_pausado').hide();
+          $('#aguardePause').show();
+          $('#tapaPlay').show();
+          
+          $(".fondo").css("background-color", "#c0c0c0");
+          
+        setTimeout(function(){ 
+            $('#aguardePause').hide(); 
+            $('#tapaPlay').hide(); 
+            $(".fondo").css("background-color","#4caf50");
+           
+        }, 500);
+        
+        
+            if($('#botonplay').hasClass('active')){
+                //alert('Tem');
+            } else {
+                setTimeout(function(){ 
+                    $('#treino_pausado').show();
+                }, 500);
+            }
+          
+            var codigoMaquinaAltera = $("#codigoMaquinaAltera").text(); 
+            var codigoMaquina = $("#codigoMaquina").text();
+            
+            var x = document.getElementById("divtreino_pausado");
+            
+            
+                                                  var x = document.getElementById("divtreino_pausado");
+                                            
+           alert(x.style.display);
+            
+            if (x.style.display === "block") {
+              x.style.display = "none";
+                var acao_treino = "play"; 
+                
+            } else {
+              x.style.display = "block";
+              
+              
+                var acao_treino = "pausa"; 
+                 
+                 
+                 
+            }
+
+    // -------------------------------------------------------------------------------------        
+         // alert(acao_treino);
+                $.get( "api/exe.php?funcao=TrocaTreino&maquina="+codigoMaquinaAltera, function( data ) {
+              
+          //  alert(data+ " == " + acao_treino )
+            
+            $.get( "api/exe.php?funcao=pausaTreino&comando_tabela_treino="+data+"&comando="+acao_treino, function( data ) {                
+               // alert(data)
+            });
+            
+                     
+                 });     
+   // -------------------------------------------------------------------------------------   
+                
+              
+       
+        }
+        
+      
+        
+        
+        function parar_treino(){
+            $('.someDiv').slideDown('fast');   
+            $('#DivContador').slideUp('fast');
+            $('#DivAguardeVoltar').slideDown('fast');
+            
+             $('#CobretelaAvisoNovo').slideDown('fast');
+            
+            $('#DivContadorB').slideUp('fast');
+            var codigoMaquinaAltera = $("#codigoMaquinaAltera").text(); 
+            var codigoMaquina = $("#codigoMaquina").text();
+            
+          //alert("codigoMaquina");
+                 $.get( "api/exe.php?funcao=TrocaTreino&maquina="+codigoMaquinaAltera, function( data ) {
+                     
+                     
+             var codigoMaquina = $(".codigoMaquina").text();   
+             var tempo_select = $(".Tempo_escolhido").text(); 
+              
+             var tipo_de_treino_fi = "18:0|32:0|33:0"; 
+             var txt_bt_variacao = $("#txt_bt_variacao").text(); 
+             var txt_bt_efeito = $("#txt_bt_efeito").text(); 
+             var txt_bt_velocidade = $("#txt_bt_velocidade").text(); 
+             var txt_bt_intervalo = $("#txt_bt_intervalo").text(); 
+             var txt_bt_trajetoria = $("#txt_bt_trajetoria").text(); 
+             var txt_bt_pressao = $("#txt_bt_pressao").text(); 
+             var tipo_comunicacao = $("#tipo_comunicacao").text();   
+             
+             
+             
+             
+             
+             var junta_arduino = tipo_de_treino_fi+"|"+txt_bt_variacao+"|"+txt_bt_efeito+"|"+txt_bt_velocidade+"|"+txt_bt_intervalo+"|"+txt_bt_trajetoria+"|"+txt_bt_pressao
+              
+            // alert(tipo_comunicacao +" ---  "+ data)
+            
+            $.get( "api/exe.php?funcao=AlteraTreinoVolta&comando_tabela_treino="+data+"&juntaArduino="+junta_arduino, function( data ) {                
+                
+            });
+                     
+                     
+                
+                 $('#DivAguardeVoltar').delay( 500 ).slideUp('fast');
+                 $('#CorrigeTreino').delay( 500 ).slideDown('fast');
+                 $('#TempoRestanteRet').delay( 500 ).slideDown('fast');
+                  //$('#DivContador').delay( 16000 ).slideUp('fast');
+                    function contaRegressivaRe(){
+                        $('#TempoRestanteRet').load('api/contador.php?maquina='+codigoMaquinaAltera+'&funcao=VerificaGet&font=v');
+                    }              
+
+                                    contador = setInterval(contaRegressivaRe, 1000);
+                 //$('.escolha_recarga').slideDown('fast');
+                 
+                 $('#btRecargaIni').slideUp('fast');
+                 
+                 $('#escolhaTreiono').slideDown('fast');
+                 $("#tipo_comunicacao").html("AlteraTreino|"+data);
+                
+                 
+            //alert(data);       
+                
+            });
+       
+        }
+   
+        
+        function FechaCobretelaAvisoNovo() {
+            $('#CobretelaAvisoNovo').slideUp('fast');
+        }
+        
+        
+        function mostra_confirmacao() {
+            
+        var tempo_select = $('#tempo_select option:selected').val();
+          
+          
+        $('#selectComboTempo').slideUp('fast');
+       
+        $('#CorrigeTreino').slideDown('fast');
+        $('#btRecargaIni').slideUp('fast');
+          $('#escolhaTreiono').slideDown('fast');
+          $('.quadro_playlist').slideDown('fast');
+          //alert('Aqui')
+          
+          $('#bt_confirma').slideDown('fast');
+           var tempo_select = $('#tempo_select option:selected').val();
+           //alert(tempo_select)
+           $('.Tempo_escolhido').html(tempo_select);
+           
+            
+        }    
+        
+        
+         function bt_efeito(val,nome) {           
+            //alert(nome)
+            $('#txt_bt_efeito').html(val);
+            $.get("grava_nome.php?local=nome_efeito&conteudo="+nome, function(data, status){ });
+            
+        }
+        
+        function bt_velocidade(val,nome) {           
+            //alert(val)
+            $('#txt_bt_velocidade').html(val);
+            $.get("grava_nome.php?local=nome_velocidade&conteudo="+nome, function(data, status){ });
+        }        
+        function bt_intervalo(val,nome) {           
+            //alert(val)
+            $('#txt_bt_intervalo').html(val);
+            $.get("grava_nome.php?local=nome_intervalo&conteudo="+nome, function(data, status){ });
+        }
+        function bt_trajetoria(val,nome) {           
+            //alert(val)
+            $('#txt_bt_trajetoria').html(val);
+            $.get("grava_nome.php?local=nome_trajetoria&conteudo="+nome, function(data, status){ });
+        }
+                
+                
+                
+        function bt_variacao() {
+            var val = $('#bt_variacao').val();
+            
+            $('#txt_bt_variacao').text($('#bt_variacao').val());
+
+            $("#bt_variacao").on('change', function() {
+              if ($(this).is(':checked')) {
+                $(this).attr('value', '19:1');
+                    $.get("grava_nome.php?local=nome_variacao&conteudo=Duplo", function(data, status){ });
+              } else {
+                $(this).attr('value', '19:0');
+                    $.get("grava_nome.php?local=nome_variacao&conteudo=Normal", function(data, status){ });
+              }
+
+              $('#txt_bt_variacao').text($('#bt_variacao').val());
+              //alert($('#bt_variacao').val())
+            });
+            
+            
+            
+        }   
+       
+       
+       function filterme(value) {
+    
+                value = parseInt(value, 10); // Convert to an integer
+
+                $(".btPressao").attr('id', 'newID');
+                if (value === 1) {
+                  $('#RangeFilter').removeClass('rangeAll', 'rangePassive').addClass('rangeActive');
+                  $('#new_posicao_bola').text('BAIXA');
+                  $('#txt_bt_pressao').html('2:0');
+                  $.get("grava_nome.php?local=nome_pressao&conteudo=Baixa", function(data, status){ });
+                } else if (value === 2) {
+                  $('#RangeFilter').removeClass('rangeActive', 'rangePassive').addClass('rangeAll');
+                  $('#new_posicao_bola').text('NORMAL');
+                  $('#txt_bt_pressao').html('2:1');
+                  $.get("grava_nome.php?local=nome_pressao&conteudo=Normal", function(data, status){ });
+                } 
+              }
+        
+        
+        function troca_camera(camera) {
+            
+            
+            
+          //  alert('Camera teste')
+            
+             var tipo = 'qrcode'; // qrcode ou o ID da maquina
+             
+             if(tipo === 'qrcode'){
+                 
+                  let scanner = new Instascan.Scanner(
+                    {
+                        video: document.getElementById('preview'),                        
+                        mirror: false
+                        
+                    }
+                );
+                scanner.addListener('scan', function(content) {
+                        $('.botao_camera').slideUp('fast');
+                        $('.escolha_recarga').slideDown('fast');
+                        //alert(content);
+                            localStorage.setItem('PlayList','N');
+                            $.get( "api/retornaMaquina.php?codigo="+content+"&sessao=100", function( data ) {                            
+                            // alert(data)
+                            var variaveis = data.split("|");
+                          //  alert(variaveis[1])
+                            
+                            if(variaveis[1] === 'erro'){
+                               // alert("em uso")
+                               
+                                                        
+                               
+                               
+                                    $('#btRecargaIni').slideUp('fast');
+                                    $('#Bloco_Envio').slideUp('fast');  
+                                    $('.botao_camera').slideUp('fast');  
+                                    
+                                    var tipo_comunicacao = $("#tipo_comunicacao").text(); 
+                                    
+                                    alert(tipo_comunicacao + " Segundo");
+                                     if(tipo_comunicacao != "addGet"){
+                                         
+                                     } else {
+                                     $('#Bloco_Envio').slideUp('fast');  
+                                    $('.navbar-top').slideDown('fast');     
+                                    $('#DivContador').slideDown('fast');   
+                                   // alert('slideDown');
+                                    $('#codigoMaquinaAltera').html(content);
+                                     }
+                                    // $('#DivContador').slideDown('fast'); // 8888888888888888888
+                                    function contaRegressiva(){
+                                        $('#TempoRestante').load('api/contador.php?maquina='+content+'&funcao=VerificaGet&font=');
+                                    }              
+
+                                    contador = setInterval(contaRegressiva, 1000);
+                                    
+                             } else if(variaveis[1] === 'inexistente'){
+                              // alert("Liberada")
+                                    $('#clickCamera').slideDown('fast'); 
+                                     $('.txtQr').slideDown('fast');
+                                    $('.botao_camera').slideUp('fast');  
+                                    $('.escolha_recarga').slideUp('fast');
+                                    
+                                    alert('Codigo inexistente');
+                                   
+                                    
+                                    
+                                    
+                            } else if(variaveis[1] === 'bloqueia'){
+                              // alert("Liberada")
+                                    $('#clickCamera').slideDown('fast'); 
+                                     $('.txtQr').slideDown('fast');
+                                    $('.botao_camera').slideUp('fast');  
+                                    $('.escolha_recarga').slideUp('fast');
+                                    
+                                    alert('Equipamento em uso');
+                                   
+                                    
+                                    
+                                    
+                            } else {
+                                // $(".result").html( data );
+                                // alert(variaveis[1]);
+                                 $('.codigoMaquina').html(variaveis[1]);
+                                 $('#codigoMaquinaAltera').html(variaveis[1]);
+                                 $('.NomeClube').html(variaveis[2]);
+
+                                 $('.botao_camera').slideUp('fast');
+                                 $('.escolha_recarga').slideDown('fast');
+                            }
+                        });
+
+                });
+                Instascan.Camera.getCameras().then(cameras => 
+                {
+                     if (cameras.length > 0) {
+                        var selectedCam = cameras[0];
+                        $.each(cameras, (i, c) => {
+                            if (c.name.indexOf('back') !== -1) {
+                                selectedCam = c;
+                                return false;
+                            }
+                        });
+
+                        scanner.start(selectedCam);
+                    } else {
+                        console.error("Não existe câmera no dispositivo!");
+                    }
+                });
+        
+           
+              
+                  
+             } else {
+                // alert(tipo);
+                        $('.botao_camera').slideUp('fast');
+                        $('.escolha_recarga').slideDown('fast');
+                        
+                            $.get( "api/retornaMaquina.php?codigo="+tipo, function( data ) {                            
+                            // alert(data)
+                            var variaveis = data.split("|");
+                           // alert(variaveis[1])
+                            
+                            if(variaveis[1] === 'erro'){
+                                alert('To aqui 3')
+                                    $('#Bloco_Envio').slideUp('fast');  
+                                     $('.botao_camera').slideUp('fast');  
+                                    
+                                   
+                                    
+                                     $('#Bloco_Envio').slideUp('fast');  
+                                    $('.navbar-top').slideDown('fast');     
+                                    $('#DivContador').slideDown('fast');              
+
+//$('#DivContador').slideDown('fast'); // 8888888888888888888
+                                    function contaRegressiva(){
+                                        $('#TempoRestante').load('api/contador.php?maquina='+tipo+'&funcao=VerificaGet');
+                                    }              
+
+                                    contador = setInterval(contaRegressiva, 1000);
+                                    
+                            } else if(variaveis[1] === 'inexistente'){
+                               // alert('To aqui 4')
+                                    $('#clickCamera').slideDown('fast'); 
+                                     $('.txtQr').slideDown('fast');
+                                    $('.botao_camera').slideUp('fast');  
+                                    $('.escolha_recarga').slideUp('fast');
+                                    
+                                    alert('Codigo inexistente');
+                                   
+                                    
+                                    
+                                    
+                            } else {
+                                // $(".result").html( data );
+                                // alert(variaveis[1]);
+                                 $('.codigoMaquina').html(variaveis[1]);
+                                 $('.NomeClube').html(variaveis[2]);
+
+                                 $('.botao_camera').slideUp('fast');
+                                 $('.escolha_recarga').slideDown('fast');
+                            }
+                        });
+
+                 
+             }
+             
+          
+        
+        }   
+        //SobrepoeEsp
+        
+        
+  
+        
+        
+        function contaRegressivaEsp(){
+                    var codigoMaquinaAltera = $("#codigoMaquinaAltera").text();
+                    $.post("api/verificaesp.php?maquina="+codigoMaquinaAltera, function(data, status){
+
+                        //console.log(data)
+                        //alert(data);
+                       // $("#SobrepoeEspTeste").html(data);
+                        if(data === "0"){
+                            $('#SobrepoeEsp').slideDown('fast');
+                        } else {
+                            $('#SobrepoeEsp').slideUp('fast');
+                        }
+
+                    });
+            }              
+
+                contador = setInterval(contaRegressivaEsp, 1000); 
+        
+        
+        
+        function reinicio_maquina(){
+            
+            Swal.fire({
+                title: "Resetar máquina!",
+                text: "Esta função só pode ser utilizada em caso de pane ou parada da máquina drilbot!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Continuar!",
+                cancelButtonText: "Cancelar" 
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    //troca_camera(2);
+                    window.location.href = "inicial.php?acao=reinicia";
+                }
+              });
+            
+           
+            
+           // $.get( "api/exe.php?funcao=salvaTreino&idTreino="+idTreino+"&NomeTreino="+NomeTreino, function( data ) {  
+               
+           // });
+        } 
+        
+        
+        
+        
+                function ContaTempo(){
+                  
+                   // $.post("tempo.php", function(data, status){
+                         //$("#SobrepoeEspTeste").html(data);
+                   // });
+                }              
+
+               // contador = setInterval(ContaTempo, 1000); 
+        function AguardaCattegamento(){
+         //$('.AguardaCattegamento').show();     
+         // $('#SobrepoeEsp').slideUp('fast');
+        }
+        
+    </script>
+	
+ 
+    
+    
+	<!-- scripts -->
+	<script src="./Drillbot_files/jquery.min.js.download"></script>
+        
+    
+        <script src="./Drillbot_files/script.js.download"></script>
+        <script src="./Drillbot_files/sw.js.download"></script>
+	<script src="./Drillbot_files/materialize.min.js.download"></script>
+	<script src="./Drillbot_files/owl.carousel.min.js.download"></script>
+	<script src="./Drillbot_files/fakeLoader.min.js.download"></script>
+	<script src="./Drillbot_files/animatedModal.min.js.download"></script>
+	<script src="./Drillbot_files/jquery.filterizr.min.js.download"></script>
+	<script src="./Drillbot_files/jquery.magnific-popup.min.js.download"></script>
+	<script src="./Drillbot_files/jquery.validate.js.download"></script>
+	<script src="./Drillbot_files/main.js.download"></script>
+
+
+        
+        
+        
+         <link rel="stylesheet" type="text/css" href="./Drillbot_files/jquery.dataTables.css">
+         <link rel="stylesheet" type="text/css" href="./Drillbot_files/buttons.dataTables.min.css">
+         
+         
+         
+         
+
+
+         
+         
+            <script type="text/javascript" charset="utf8" src="./Drillbot_files/jquery.dataTables.min.js.download"></script>
+            <script src="./Drillbot_files/jquery.modal.min.js.download"></script>
+            <script type="text/javascript" charset="utf8" src="./Drillbot_files/dataTables.responsive.js.download"></script>
+            
+            <script src="./Drillbot_files/moment.min.js.download"></script>
+            <script src="./Drillbot_files/datetime-moment.js.download"></script>
+            
+            <script type="text/javascript" charset="utf8" src="./Drillbot_files/dataTables.buttons.min.js.download"></script>
+            <script type="text/javascript" charset="utf8" src="./Drillbot_files/jszip.min.js.download"></script>
+            <script type="text/javascript" charset="utf8" src="./Drillbot_files/pdfmake.min.js.download"></script>
+            <script type="text/javascript" charset="utf8" src="./Drillbot_files/vfs_fonts.js.download"></script>
+            <script type="text/javascript" charset="utf8" src="./Drillbot_files/buttons.html5.min.js.download"></script>
+            
+            <script src="./Drillbot_files/jquery.maskMoney.min.js.download"></script>
+<script src="./Drillbot_files/jquery.maskedinput.min.js.download"></script>
+
+        <script type="text/javascript">
+            
+            
+               
+            
+            
+            
+    function busca_sms(){
+        var valor = document.getElementById('codigo_sms').value  
+        console.log(valor);
+        var n = valor.length;
+        
+        if(n >= '6'){
+           // console.log('Executa');
+                $.post( "api/exe.php?funcao=validaSMS&codigo="+valor, function( data ) {
+                   //console.log(data);
+                    
+                    if(data == 'erro'){
+                        document.getElementById('codigo_sms').value=''; 
+                        alert('Confira o código, e tente novamente');
+                    } else {
+                        Swal.fire("Telefone confirmado com sucesso!");
+                        
+                         
+                             Swal.fire({
+                                html: "Telefone confirmado com sucesso"
+                              }); 
+                        
+                        
+                    }
+                });
+        } 
+        
+    }
+            
+                $(document).ready(function() {  
+                    
+                    
+
+                    
+                            $.extend($.validator.messages, {
+                                required: "Este campo &eacute; requerido.",
+                                remote: "Por favor, corrija este campo.",
+                                email: "Por favor, forne&ccedil;a um endere&ccedil;o eletr&ocirc;nico v&aacute;lido.",
+                                url: "Por favor, forne&ccedil;a uma URL v&aacute;lida.",
+                                date: "Por favor, forne&ccedil;a uma data v&aacute;lida.",
+                                dateISO: "Por favor, forne&ccedil;a uma data v&aacute;lida (ISO).",
+                                number: "Por favor, forne&ccedil;a um n&uacute;mero v&aacute;lido.",
+                                digits: "Por favor, forne&ccedil;a somente d&iacute;gitos.",
+                                creditcard: "Por favor, forne&ccedil;a um cart&atilde;o de cr&eacute;dito v&aacute;lido.",
+                                equalTo: "Insira o mesmo valor de repasse para validar.",
+                                accept: "Por favor, forne&ccedil;a um valor com uma extens&atilde;o v&aacute;lida.",
+                                maxlength: $.validator.format("Por favor, forne&ccedil;a n&atilde;o mais que {0} caracteres."),
+                                minlength: $.validator.format("Por favor, forne&ccedil;a ao menos {0} caracteres."),
+                                rangelength: $.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1} caracteres de comprimento."),
+                                range: $.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1}."),
+                                max: $.validator.format("Por favor, forne&ccedil;a um valor menor ou igual a {0}."),
+                                min: $.validator.format("Por favor, forne&ccedil;a um valor maior ou igual a {0}.")
+                            });
+
+                   
+                   $('#formularioValidation').validate({ // initialize the plugin
+                            rules: {
+                               
+                                valor_repasse: {
+                                    equalTo: "#valor_ini"
+                                }
+                            },
+                            messages: {
+                                
+                                valor_repasse: {
+                                    valor_repasse: "Repota o mesmo valor acima para confirmar",
+                                }
+                            }
+                        });  
+                   
+                   
+                   
+                   
+                    $('.currency').maskMoney({
+                        prefix:'',
+                        allowNegative: true,
+                        thousands:'.', decimal:'.',
+                        affixesStay: true
+                    });
+                   
+                   
+                    $('.bt').click(function(){
+                        $( ".wf-dialog-modal").hide();
+                    });
+                      $('.clicModal').click(function(){
+                        var id = $(this).attr('id');
+                        var data = $(this).attr('data');
+                       // alert(id);
+                        $(".nomerelato").html(data);
+                        $( ".wf-dialog-modal").show();
+                        $( ".wf-content-modal").load( "relatoUser.php?id="+id, function() {
+                            //alert( "Load was performed." );
+                          });
+                    });
+                    
+                    
+   
+  
+    $('#vip').change(function(){
+      	$('#DivPorcent').toggle();
+    });
+ 
+ 
+ 
+ 
+ $("#codigo_sms").keyup(function() {
+  //Ação de busca
+  //alert('Buscando...');
+});         
+
+ $(".meter > span").each(function () {
+  $(this)
+    .data("origWidth", $(this).width())
+    .width(0)
+    .animate(
+      {
+        width: $(this).data("origWidth")
+      },
+      1200
+    );
+});
+
+
+    
+
+
+
+    $('.bt_excluiUser').click(function(){       
+        var id = $(this).attr("id"); 
+       // alert(id)
+            Swal.fire({
+                title: "Excluir usuário!",
+                icon: "info",
+                    html: `Ao excluir este usuario, serão deletados seus dados de pagamento, E-mail e informações relevantes, porem telefone e e-mail permanecerão criptigrafados.`,
+                showCancelButton: true,
+                confirmButtonText: "Sim, excluir",
+                cancelButtonText: "Cancelar"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire("Tudo certo!", "Usúario removido com sucesso!", "success");
+                    window.location.href = "?id="+id+"&acao=exclui";
+                } 
+              });
+              
+  });
+
+
+
+    $('.bt_excluiUserUser').click(function(){       
+        var id = $(this).attr("id"); 
+        //alert(id)
+            Swal.fire({
+                title: "Excluir conta!",
+                icon: "info",
+                    html: `Deseja realmente excluir sua conta?`,
+                showCancelButton: true,
+                confirmButtonText: "Sim, excluir",
+                cancelButtonText: "Cancelar"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire("Tudo certo!", "Usúario removido com sucesso!", "success");
+                    window.location.href = "api/exit.php?id="+id+"&acao=exclui";
+                } 
+              });
+              
+  });
+
+
+ $('.bt_confirma_saquedd').click(function(){                 
+        var id = $(this).attr("id");          
+        Swal.fire({
+        title: "Confirmar solicitação de retirada",
+        html: "E recomendavel entrar em contato com o cliente para confirmar os dados para transferencia!<br>Caso ja tenha feito, clique no botão confirmar transferencia abaixo! ",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Confirmar transferencia",
+        cancelButtonText: "Cancelar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+                          
+             $.get("api/exe.php?funcao=efetiva_saque&id="+id, function(data, status){
+                $("#t_"+id).hide();
+                
+              });
+             
+          Swal.fire({
+            title: "Confirmação realizada com sucesso!",
+            text: "Aguarde o contato de um de nossos colaboradores",
+            icon: "success"
+          });
+        }
+      });            
+    });  
+ 
+                    
+ $('.bt_saque').click(function(){                 
+                 
+        Swal.fire({
+        title: "Solicitar retirada",
+        html: "Atenção!<br>Ao solicitar a retirada do saldo, um de nossos atendentes etntrarão em contato com voce, atravez dos telefones cadastrados no sistema para confirmar a solicitação, este prazo podera demorar ate 48 horas uteis! ",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Confirmar",
+        cancelButtonText: "Cancelar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+                          
+             $.get("api/exe.php?funcao=saque", function(data, status){
+                $(".bt_saque").hide();
+                $(".aviso_saque").show();
+              });
+             
+          Swal.fire({
+            title: "Solicitação realizada com sucesso!",
+            text: "Aguarde o contato de um de nossos colaboradores",
+            icon: "success"
+          });
+        }
+      });            
+    });              
+                                  
+   
+   
+   
+  $('.bt_cad_porcentagem_bb').click(function(){   
+      
+      
+      Swal.fire({
+                title: "<strong class='titleModal'>Aguarde</strong>",
+                html: `<div class='conteudoModal' ><center>Aguarde!<br><img src="loading.gif" style=" height: 100px"></div></div>`,
+                showCloseButton: false,
+                showCancelButton: true,
+                showConfirmButton: false,
+                cancelButtonText: "Cancelar",
+                customClass: 'swal-wide',
+              
+            });
+      
+      
+                var id = $(this).attr('id');
+                var data = $(this).attr('data');
+                var title = $(this).attr('title');
+               // alert(id);
+                $(".titleModal").html(title);
+                $(".nomerelato").html(data);
+                $(".conteudoModal").load( data+"?id="+id, function() {
+                                    //alert( "Load was performed." );
+                });
+                        
+            
+                      
+  });    
+   
+   
+   
+  $('.bt_cad_porcentagem').click(function(){        
+        Swal.fire({
+                title: "<strong>Alterar valores</strong>",
+                html: `
+                 <form action='?' method='post' >
+                <div class="input-field" style="text-align: left;">
+                    <spam>Porcentagem paga</spam>
+                    <input type='number' name='recebe_porcentagem' value='' >
+                </div>
+                <div class="input-field"  style="text-align: left;">
+                    <spam>Valor maximo</spam>
+                    <input class='number' type='number' name='total_porcentagem' value=''>
+                </div>
+                <div class="input-field"  style="text-align: left;">
+                    <spam>Bônus afiliação</spam>
+                    <input class='number' type='number' name='bonus_afiliado' value=''>
+                </div>
+                                    
+                    <input id='idno' type='text' name='acao' value='alterar_percent' hidden=''>
+                    <button type="submit" class="button-default widit100">Alterar</button>
+                </form>`,
+                showCloseButton: false,
+                showCancelButton: true,
+                showConfirmButton: false,
+                 cancelButtonText: "Cancelar",
+              
+              });
+                      
+  });                   
+                    
+                    
+ $('.bt_geracod').click(function(){                    
+            Swal.fire({
+                title: "Atenção!",
+                icon: "info",
+                icon: "info",
+                html: `Ao clicar em gerar codigo, ele permanecera ativo por <b>5 Minutos</b>,<br>
+                  Após este período sera necessario gerar um novo codigo, certifique-se de que o aluno/sócio esteja disponivel para a inserção do código neste período!
+                 `,
+                showCancelButton: true,
+                confirmButtonText: "Confirmar",
+            }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                $.get("api/exe.php?funcao=grava_cod&cod_gerado=&id_user=");  
+                
+                    Swal.fire({
+                    
+                    title: "Código gerado!",
+                    html: "O código gerado e <b></b><br> O codigo perderá a validade em <b><span>5 Minuto</span></b>.",
+                    timer: 300000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                      Swal.showLoading();
+                      const timer = Swal.getPopup().querySelector("sspan");
+                      timerInterval = setInterval(() => {
+                        timer.textContent = `${Swal.getTimerLeft()}`;
+                      
+                      }, 1000);
+                    },
+                    willClose: () => {
+                      clearInterval(timerInterval);
+                    }
+            });
+            
+            
+            
+            } else if (result.isDenied) {
+            Swal.fire("Changes are not saved", "", "info");
+            }
+            });                
+
+}); 
+
+
+
+                    
+                         $("#mes_ano").mask("99/99");
+                         
+                         
+                                    // você pode usar um dos dois com data ou data e hora
+    $.fn.dataTable.moment( 'DD/MM/YYYY HH:mm:ss' );    //Formatação com Hora
+    $.fn.dataTable.moment('DD/MM/YYYY');    //Formatação sem Hora
+                               
+    $.extend(jQuery.fn.dataTableExt.oSort, {
+    "date-br-pre": function ( a ) {
+        if (a == null || a == "") {
+            return 0;
+        }
+        var brDatea = a.split('/');
+        return (brDatea[2] + brDatea[1] + brDatea[0]) * 1;
+    },
+
+    "date-br-asc": function ( a, b ) {
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    },
+
+    "date-br-desc": function ( a, b ) {
+        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+    }
+});                     
+                         
+                        $('#example').DataTable({
+                        
+                            order: [
+                                [1, "desc"]
+                            ],                        
+                            dom: 'Bfrtip',
+                             columnDefs: [
+                            {
+                                type: 'date-br', 
+                                targets: 4 
+                            }
+                        ],
+                            buttons: [
+                            
+                            
+                            
+        { extend: 'excelHtml5', text: 'Exportar para exel',  title: 'Relatorio ( Boris Becker )' }
+        
+             ],
+                           responsive: true,
+                           "columnDefs": [
+                                    { responsivePriority: 1, targets: 0 },
+                                    { responsivePriority: 2, targets: -1 }
+                                ],
+                          "language": {
+                            "sProcessing":    "Procesando...",
+                            "sLengthMenu":    "Mostrar _MENU_ registros",
+                            "sZeroRecords":   "Sem resultados",
+                            "sEmptyTable":    "Nenhum registro na tabela",
+                            "sInfo":          "Mostrando registros de _START_ a _END_ de um total de _TOTAL_ registros",
+                            "sInfoEmpty":     "Mostrando registros de 0 a 0 de un total de 0 registros",
+                            "sInfoFiltered":  "(filtrado de um total de _MAX_ registros)",
+                            "sInfoPostFix":   "",
+                            "sSearch":        "Buscar:",
+                            "sUrl":           "",
+                            "sInfoThousands":  ",",
+                            "sLoadingRecords": "Carregando...",
+                            "oPaginate": {
+                                "sFirst":    "Primiero",
+                                "sLast":    "Último",
+                                "sNext":    "Seguinte",
+                                "sPrevious": "Anterior"
+                            },
+                            "oAria": {
+                                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                            }
+                        }
+                    });
+            } );
+             
+            $(".valoratual").load( "api/ajustaValor.php" );
+             $(".valoratualP").load( "api/ajustaValorP.php" );
+            
+            $(".comboSelect").load( "creditoUser.php" );  
+               
+
+        </script>   	
+      
+
+                     
+        
+        
+<div class="hiddendiv common"></div><div class="drag-target" style="right: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body></html>
